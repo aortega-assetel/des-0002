@@ -24,5 +24,6 @@
      # always loaded
     'data': [
         'views/stock_production_lot.xml',
+        'views/stock_move_line.xml',
         ],
 }
