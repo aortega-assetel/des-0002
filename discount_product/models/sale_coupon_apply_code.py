@@ -40,7 +40,7 @@ class SaleCouponApplyCode(models.TransientModel):
                 else:  # The program is applied on this order
                     #order._create_reward_line(program)
                     #Add by Alan Ortega
-                     _logger.info('SI 1')
+                    _logger.info('SI 1')
                     for line in order.order_line:
                         _logger.info('SI 2')
                         if line.product_id.id == program.reward_product_id.id:
