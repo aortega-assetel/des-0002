@@ -2,6 +2,8 @@
 
 from odoo import api, fields, models, _
 from odoo.exceptions import UserError
+import logging
+_logger = logging.getLogger(__name__)
 
 from odoo import models, api, fields, exceptions
 
@@ -40,7 +42,8 @@ class SaleCouponApplyCode(models.TransientModel):
                     #Add by Alan Ortega
                     for line in order.order_line:
                         if line.product_id == program.reward_product_id:
-                            line.write({'discount': 99.00})
+                            line.write({'discount': '99.00'})
+                            _logger.info('SI 1')
 
                     order.code_promo_program_id = program
         else:
@@ -54,6 +57,7 @@ class SaleCouponApplyCode(models.TransientModel):
                     for line in order.order_line:
                         if line.product_id == program.reward_product_id:
                             line.write({'discount': 99.00})
+                            _logger.info('SI 2')
                     coupon.write({'state': 'used'})
             else:
                 error_status = {'not_found': _('This coupon is invalid (%s).') % (coupon_code)}
