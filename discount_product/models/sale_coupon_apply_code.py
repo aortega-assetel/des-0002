@@ -38,7 +38,7 @@ class SaleCouponApplyCode(models.TransientModel):
                 else:  # The program is applied on this order
                     #order._create_reward_line(program)
                     #Add by Alan Ortega
-                    for line in orden.order_line:
+                    for line in order.order_line:
                         if line.product_id == program.reward_product_id:
                             line.discount = 99.00
 
@@ -51,7 +51,7 @@ class SaleCouponApplyCode(models.TransientModel):
                     #order._create_reward_line(coupon.program_id)
                     order.applied_coupon_ids += coupon
                     #Add by Alan Ortega
-                    for line in orden.order_line:
+                    for line in order.order_line:
                         if line.product_id == program.reward_product_id:
                             line.discount = 99.00
                     coupon.write({'state': 'used'})
