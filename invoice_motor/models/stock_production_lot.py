@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from typing import Sequence
 from odoo import models, api, fields
 import logging
 
@@ -14,11 +15,11 @@ class StockProductionLot(models.Model):
     def create(self, vals):
         result = super(StockProductionLot, self).create(vals)
 
-        serie = self.env['stock.move.line'].search([('lot_id', '=', result.id)])
-
+        serie = self.env['stock.move.line'].search([('lot_id.name', '=', result.name)])
         _logger.info(str(serie))
+        _logger.info(str(vals))
         result.motor = True
-        result.no_motor = serie.no_motor
+        result.no_motor = vals.no_motor
 
         return result
 
