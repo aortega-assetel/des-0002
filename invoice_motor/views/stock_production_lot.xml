@@ -8,8 +8,8 @@
     <field name="arch" type="xml">
 
         <xpath expr="//field[@name='ref']" position="after">
-            <field name="motor" readonly="1"/>
-            <field name="no_motor" readonly="1"/>
+            <field name="motor" widget="boolean_toggle"/>
+            <field name="no_motor" attrs="{'invisible': [('motor', '=', False)]}"/>
         </xpath>
 
     </field>
