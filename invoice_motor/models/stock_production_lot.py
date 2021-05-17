@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 from odoo import models, api, fields
+import logging
+
+_logger = logging.getLogger(__name__)
 
 class StockProductionLot(models.Model):
     _inherit = 'stock.production.lot'
@@ -13,8 +16,9 @@ class StockProductionLot(models.Model):
 
         serie = self.env['stock.move.line'].search([('lot_id', '=', result.id)])
 
+        _logger.info(str(serie))
         result.motor = True
-        result.no_motor = self.no_motor
+        result.no_motor = serie.no_motor
 
         return result
 
