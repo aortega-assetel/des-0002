@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <record id="stock_production_lot_inherit_invoice_motor" model="ir.ui.view">
+    <field name="name">stock_production_lot.inherit.invoice.motor</field>
+    <field name="model">stock.production.lot</field>
+    <field name="inherit_id" ref="stock.view_production_lot_form"/>
+    <field name="arch" type="xml">
+
+        <xpath expr="//field[@name='ref']" position="after">
+            <field name="motor" widget="boolean_toggle"/>
+            <field name="no_motor" attrs="{'invisible': [('motor', '=', False)]}"/>
+        </xpath>
+
+    </field>
+  </record>
+
+</odoo>
