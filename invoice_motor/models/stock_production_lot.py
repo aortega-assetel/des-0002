@@ -14,7 +14,7 @@ class StockProductionLot(models.Model):
         serie = self.env['stock.move.line'].search([('lot_id', '=', result.id)])
 
         result.motor = True
-        result.no_motor = serie.no_motor
+        result.no_motor = self.no_motor
 
         return result
 
