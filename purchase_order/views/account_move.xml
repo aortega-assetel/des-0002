@@ -7,7 +7,7 @@
       <field name="arch" type="xml">
 
         <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='other_info']/group[1]/group[@name='sale_info_group']/field[@name='partner_bank_id']" position="after">
-            <field name="purchase_order" attrs="{'invisible' : [('purchase_order', '=', 'not')]}"/>
+            <field name="purchase_order" attrs="{'invisible' : [('purchase_order', '=', 'null')]}"/>
         </xpath>
 
       </field>
