@@ -40,10 +40,12 @@ class SaleCouponApplyCode(models.TransientModel):
                 else:  # The program is applied on this order
                     #order._create_reward_line(program)
                     #Add by Alan Ortega
+                     _logger.info('SI 1')
                     for line in order.order_line:
+                        _logger.info('SI 2')
                         if line.product_id.id == program.reward_product_id.id:
                             line.write({'discount': 99.00})
-                            _logger.info('SI 1')
+                            _logger.info('SI 3')
 
                     order.code_promo_program_id = program
         else:
@@ -55,9 +57,9 @@ class SaleCouponApplyCode(models.TransientModel):
                     order.applied_coupon_ids += coupon
                     #Add by Alan Ortega
                     for line in order.order_line:
-                        if line.product_id.id == program.reward_product_id.id:
+                        if line.product_id.id == coupon.program_id.reward_product_id.id:
                             line.write({'discount': 99.00})
-                            _logger.info('SI 2')
+                            _logger.info('SI 4')
                     coupon.write({'state': 'used'})
             else:
                 error_status = {'not_found': _('This coupon is invalid (%s).') % (coupon_code)}
