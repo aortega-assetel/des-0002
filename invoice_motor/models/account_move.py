@@ -41,7 +41,7 @@ class AccountMove(models.Model):
             line.sequence = count
             note_text = ''
             for product_variant in line.product_id.product_template_attribute_value_ids:
-                if product_variant.name == 'Modelo' or product_variant.name == 'Marca' or product_variant.name == 'Cilindrada' or product_variant.name == 'Color':
+                if 'Modelo' in product_variant.display_name or 'Marca' in product_variant.display_name or 'Cilindrada' in product_variant.display_name or 'Color' in product_variant.display_name:
                     attribute = product_variant.display_name
                     note_text = note_text + attribute + '.\n'
 
