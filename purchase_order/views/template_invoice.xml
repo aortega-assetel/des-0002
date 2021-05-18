@@ -10,8 +10,8 @@
                 <div class="row">
                     <div class="col-3">
                         <span>
-                        <strong>Orden de compra:</strong>
-                        <br/>
+                            <strong>Orden de compra:</strong>
+                            <br/>
                         </span>
                         <span t-field="o.purchase_order"/>
                     </div>
