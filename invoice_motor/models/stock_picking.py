@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-from odoo import models, api, fields
+from odoo import SUPERUSER_ID, _, api, fields, models
+from odoo.exceptions import UserError
+from odoo.tools.float_utils import float_compare, float_is_zero, float_round
 
 class StockPicking(models.Model):
     _inherit = 'stock.picking'
@@ -78,7 +80,7 @@ class StockPicking(models.Model):
 
         #By Alan Ortega
         for line in self.move_line_nosuggest_ids:
-            serie = self.env['stock.production.lot'].search([('id', '==', line.lot_id.id)])
+            serie = self.env['stock.production.lot'].search([('id', '=', line.lot_id.id)])
             serie.motor = True
             serie.no_motor = serie.no_motor
 

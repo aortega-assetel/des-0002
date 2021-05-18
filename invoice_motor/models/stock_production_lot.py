@@ -12,16 +12,6 @@ class StockProductionLot(models.Model):
     no_motor = fields.Char(string='No. Motor')
 
 
-    @api.model
-    def create(self, vals):
-        result = super(StockProductionLot, self).create(vals)
-
-        serie = self.env['stock.move.line'].search([('lot_id.name', '==', result.name)])
-        result.motor = True
-        result.no_motor = serie.no_motor
-
-        return result
-
 
     
         
