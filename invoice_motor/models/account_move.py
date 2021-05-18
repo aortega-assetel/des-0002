@@ -13,7 +13,6 @@ class AccountMove(models.Model):
             line.sequence = count
             note_text = ''
             
-
             for line_sale in line.sale_line_ids:
                 for product_variant in line.product_id.product_template_attribute_value_ids:
                     if 'Modelo' in product_variant.display_name or 'Marca' in product_variant.display_name or 'Cilindrada' in product_variant.display_name or 'Color' in product_variant.display_name:
@@ -30,14 +29,14 @@ class AccountMove(models.Model):
                         note_text = note_text + 'Serie: ' + serie +'.\n' + 'No Motor: ' + no_motor +'.\n'
             
 
-                    values = {
-                            'name' : note_text,
-                            'display_type': 'line_note',
-                            'move_id': result.id,
-                            'sequence': count + 1,
-                        }
-                    new_note = self.env['account.move.line'].create(values)
-                    count = count + 2
+                        values = {
+                                'name' : note_text,
+                                'display_type': 'line_note',
+                                'move_id': result.id,
+                                'sequence': count + 1,
+                            }
+                        new_note = self.env['account.move.line'].create(values)
+                        count = count + 2
 
 
         return result
