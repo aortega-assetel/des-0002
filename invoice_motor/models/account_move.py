@@ -16,7 +16,7 @@ class AccountMove(models.Model):
             for product_variant in product.attribute_line_ids:
                 attribute_value = ''
                 count_values = 0
-                for attribute_line in product_variant.attribute_id.value_ids:
+                for attribute_line in product_variant.value_ids:
                     attribute = product_variant.attribute_id.name
                     if count_values == 0:
                         attribute_value = attribute_value + attribute_line.name
