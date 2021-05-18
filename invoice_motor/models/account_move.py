@@ -8,10 +8,10 @@ class AccountMove(models.Model):
     @api.model
     def create(self, vals):
         result = super(AccountMove, self).create(vals)
-        count = 0
+        '''count = 0
         for line in result.invoice_line_ids:
             line.sequence = count
-            product = self.env['product.template'].search([('id', '=', line.product_id.id)])
+            product = self.env['product.product'].search([('id', '=', line.product_id.id)])
             note_text = ''
             for product_variant in product.attribute_line_ids:
                 attribute_value = ''
@@ -35,6 +35,24 @@ class AccountMove(models.Model):
                     }
             new_note = self.env['account.move.line'].create(values)
             count = count + 2
+'''
+        count = 0
+        for line in result.invoice_line_ids:
+            line.sequence = count
+            note_text = ''
+            for product_variant in line.product_id.product_template_attribute_value_ids:
+                #if product_variant.name == 'Modelo':
+                attribute = product_variant.display_name
+                note_text = note_text + attribute + '.\n'
+            values = {
+                    'name' : note_text,
+                    'display_type': 'line_note',
+                    'move_id': result.id,
+                    'sequence': count + 1,
+                }
+            new_note = self.env['account.move.line'].create(values)
+            count = count + 2
+
 
         return result
     
