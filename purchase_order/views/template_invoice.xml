@@ -1,19 +1,12 @@
 <odoo>
   <data>
-    <record id="template_invoice_inherit_purchase_order_form" model="ir.ui.view">
-      <field name="name">template.invoice.inherit.purchase.order.form</field>
-      <field name="model">account.move</field>
-      <field name="inherit_id" ref="account.report_invoice_document"/>
-      <field name="arch" type="xml">
-
-        <xpath expr="//div[@name='customer_code']" position="after">
-          <div t-att-class="o_grid_layout">
-            <strong>Orden de compra:</strong>
-            <span t-esc="o.purchase_order"/>
-          </div>
-        </xpath>
-
-      </field>
-    </record>
+    <template id="template_invoice_inerit_purchase_order" inherit_id="account.report_invoice_document">
+      <xpath expr="//div[@name='customer_code']" position="after">
+        <div t-att-class="o_grid_layout">
+          <strong>Orden de compra:</strong>
+          <span t-esc="o.purchase_order"/>
+        </div>
+      </xpath>
+    </template>
   </data>
 </odoo>
