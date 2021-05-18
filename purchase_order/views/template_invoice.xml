@@ -4,6 +4,8 @@
       <xpath expr="//div[@name='customer_code']" position="after">
         <div t-att-class="o_grid_layout">
           <strong>Orden de compra:</strong>
+          <br>
+          </br>
           <span t-esc="o.purchase_order"/>
         </div>
       </xpath>
