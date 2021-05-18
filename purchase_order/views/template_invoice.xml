@@ -6,7 +6,7 @@
       <field name="inherit_id" ref="account.report_invoice_document"/>
       <field name="arch" type="xml">
 
-        <xpath expr="//div[@name='invoice_payment_term_id']" position="before">
+        <xpath expr="//div[@name='customer_code']" position="before">
           <div t-att-class="o_grid_layout">
             <strong>Orden de compra:</strong>
             <span t-esc="o.purchase_order"/>
