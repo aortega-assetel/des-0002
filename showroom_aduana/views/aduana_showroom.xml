@@ -1,0 +1,16 @@
+<odoo>
+  <data>
+    <record id="aduana_showroom_inherit_showroom_aduana_form" model="ir.ui.view">
+      <field name="name">aduana.showroom.inherit.showroom.aduana.form</field>
+      <field name="model">stock.landed.cost</field>
+      <field name="inherit_id" ref="stock_landed_costs.view_stock_landed_cost_form"/>
+      <field name="arch" type="xml">
+        
+        <xpath expr="//field[@name='date']" position="after">
+          <field name="cost_aduana"/>
+        </xpath>
+    
+      </field>
+    </record>
+  </data>
+</odoo>
