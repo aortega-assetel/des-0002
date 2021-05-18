@@ -25,7 +25,10 @@ class AccountMove(models.Model):
                         serie = linea.lot_id.name
                         no_motor = linea.lot_id.no_motor
 
-                        note_text = note_text + 'Serie: ' + serie +'.\n' + 'No Motor: ' + no_motor +'.\n'
+                        pedimento = self.env['stock.landed.cost'].search([('picking_ids', '=', linea.move_id.id)]).l10n_mx_edi_customs_number
+                        date = self.env['stock.landed.cost'].search([('picking_ids', '=', linea.move_id.id)]).date
+
+                        note_text = note_text + 'Serie: ' + serie +'.\n' + 'No Motor: ' + no_motor +'.\n' + 'Pedimento: ' + pedimento +'.\n' + 'Fecha de ingreso: ' + pedimento +'.\n'
             
 
                         values = {
