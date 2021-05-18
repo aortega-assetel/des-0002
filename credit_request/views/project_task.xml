@@ -7,7 +7,7 @@
     <field name="inherit_id" ref="project.view_task_form2"/>
     <field name="arch" type="xml">
 
-        <xpath expr="//button[@name='action_open_parent_task']" position="before">
+        <xpath expr="//div[@class='oe_button_box']" position="after">
             <button type="object" name="action_view_lead" class="oe_stat_button" icon="fa-money" attrs="{'invisible': [('lead_id', '=', False)]}" string="Oportunidad"/>
             <field name="lead_id" invisible="1"/>
         </xpath>
