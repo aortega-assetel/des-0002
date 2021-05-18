@@ -46,7 +46,7 @@ class AccountMove(models.Model):
                     note_text = note_text + attribute + '.\n'
             
             for line_sale in line.sale_line_ids:
-                for line_move in line.move_ids:
+                for line_move in line_sale.move_ids:
                     stock_move_line = self.env['stock.move.line'].search([('move_id', '=', line_move.id)])
                     serie = stock_move_line.lot_id.name
                     no_motor = stock_move_line.lot_id.no_motor
