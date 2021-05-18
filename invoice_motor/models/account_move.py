@@ -11,15 +11,15 @@ class AccountMove(models.Model):
         count = 0
         for line in result.invoice_line_ids:
             line.sequence = count
-            note_text = ''
             
             for line_sale in line.sale_line_ids:
-                for product_variant in line.product_id.product_template_attribute_value_ids:
-                    if 'Modelo' in product_variant.display_name or 'Marca' in product_variant.display_name or 'Cilindrada' in product_variant.display_name or 'Color' in product_variant.display_name:
-                        attribute = product_variant.display_name
-                        note_text = note_text + attribute + '.\n'
-
                 for line_move in line_sale.move_ids:
+                    note_text = ''
+                    for product_variant in line.product_id.product_template_attribute_value_ids:
+                        if 'Modelo' in product_variant.display_name or 'Marca' in product_variant.display_name or 'Cilindrada' in product_variant.display_name or 'Color' in product_variant.display_name:
+                            attribute = product_variant.display_name
+                            note_text = note_text + attribute + '.\n'
+
                     stock_move_line = self.env['stock.move.line'].search([('move_id', '=', line_move.id)])
 
                     for linea in stock_move_line:
