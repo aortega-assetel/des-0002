@@ -44,6 +44,14 @@ class AccountMove(models.Model):
                 if 'Modelo' in product_variant.display_name or 'Marca' in product_variant.display_name or 'Cilindrada' in product_variant.display_name or 'Color' in product_variant.display_name:
                     attribute = product_variant.display_name
                     note_text = note_text + attribute + '.\n'
+            
+            for line_sale in sale_line_ids:
+                for line_move in line.move_ids:
+                    stock_move_line = self.env['stock.move.line'].search([('move_id', '=', line_move.id)])
+                    serie = stock_move_line.lot_id.name
+                    no_motor = stock_move_line.lot_id.no_motor
+
+            note_text = note_text + 'Serie: ' + serie +'.\n' + 'No Motor: ' + no_motor +'.\n'
 
                 
             values = {
