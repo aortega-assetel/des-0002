@@ -26,5 +26,6 @@
         # 'security/ir.model.access.csv',
         'views/purchase_order.xml',
         'views/account_move.xml',
+        'views/template_invoice.xml',
     ],
 }
