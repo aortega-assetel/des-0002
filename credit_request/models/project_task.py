@@ -9,6 +9,7 @@ class ProjectTask(models.Model):
     request_task = fields.Boolean(string='Tarea de solicitudes de crédito', default=False)
     
     lead_id = fields.Many2one('crm.lead', string='Oportunidad')
+    attached_document = fields.Many2many('ir.attachment', string='Documento en extenso')
 
     @api.model
     def create(self, vals):
