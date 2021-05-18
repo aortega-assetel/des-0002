@@ -82,7 +82,7 @@ class StockPicking(models.Model):
         for line in self.move_line_nosuggest_ids:
             serie = self.env['stock.production.lot'].search([('id', '=', line.lot_id.id)])
             serie.motor = True
-            serie.no_motor = serie.no_motor
+            serie.no_motor = line.no_motor
 
         #By Alan Ortega
         return True
