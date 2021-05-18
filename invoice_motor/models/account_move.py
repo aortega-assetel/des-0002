@@ -18,14 +18,14 @@ class AccountMove(models.Model):
                         attribute = product_variant.display_name
                         note_text = note_text + attribute + '.\n'
 
-                    values = {
-                            'name' : note_text,
-                            'display_type': 'line_note',
-                            'move_id': result.id,
-                            'sequence': count + 1,
-                        }
-                    new_note = self.env['account.move.line'].create(values)
-                    count = count + 2
+                        values = {
+                                'name' : note_text,
+                                'display_type': 'line_note',
+                                'move_id': result.id,
+                                'sequence': count + 1,
+                            }
+                        new_note = self.env['account.move.line'].create(values)
+                        count = count + 2
 
 
         return result
