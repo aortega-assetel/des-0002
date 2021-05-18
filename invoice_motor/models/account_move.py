@@ -13,11 +13,17 @@ class AccountMove(models.Model):
             line.sequence = count
             product = self.env['product.template'].search([('id', '=', line.product_id.id)])
             note_text = ''
-            attribute_value = ''
             for product_variant in product.attribute_line_ids:
+                attribute_value = ''
+                count_values = 0
                 for attribute_line in product_variant.attribute_id.value_ids:
                     attribute = product_variant.attribute_id.name
-                    attribute_value = attribute_value + ', ' + attribute_line.name
+                    if count_values == 0:
+                        attribute_value = attribute_value + attribute_line.name
+                    else:
+                        attribute_value = attribute_value + ', ' + attribute_line.name
+                    count_values = count_values + 1
+                    
                 
                 
                 note_text = note_text + attribute + ': ' + attribute_value + '.\n'
