@@ -10,7 +10,7 @@ class AccountMove(models.Model):
         result = super(AccountMove, self).create(vals)
         count = 0
         for line in result.invoice_line_ids:
-            for i in range(2):
+            for i in range(line.quantity):
                 line.sequence = count
                 note_text = ''
                 for product_variant in line.product_id.product_template_attribute_value_ids:
