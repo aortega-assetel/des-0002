@@ -45,7 +45,7 @@ class AccountMove(models.Model):
                     attribute = product_variant.display_name
                     note_text = note_text + attribute + '.\n'
             
-            for line_sale in sale_line_ids:
+            for line_sale in line.sale_line_ids:
                 for line_move in line.move_ids:
                     stock_move_line = self.env['stock.move.line'].search([('move_id', '=', line_move.id)])
                     serie = stock_move_line.lot_id.name
