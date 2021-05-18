@@ -27,8 +27,7 @@ class AccountMove(models.Model):
                             no_motor = linea.lot_id.no_motor
 
                             note_text = note_text + 'Serie: ' + serie +'.\n' + 'No Motor: ' + no_motor +'.\n'
-'''
-                                
+'''    
                         values = {
                                 'name' : note_text,
                                 'display_type': 'line_note',
