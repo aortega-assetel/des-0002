@@ -7,7 +7,7 @@
     <field name="inherit_id" ref="base.res_config_settings_view_form"/>
     <field name="arch" type="xml">
 
-        <xpath expr="//div[@data-string='Tasks Management']" position="inside">
+        <xpath expr="//div[@data-string='Project']" position="inside">
             <h2>solicitudes de crédito</h2>
 
             <div class="row mt16 o_settings_container">
