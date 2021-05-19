@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 from odoo import models, api, fields
 
+import logging
+_logger = logging.getLogger(__name__)
+
 class AccountMove(models.Model):
     _inherit = 'account.move'
 
@@ -26,7 +29,9 @@ class AccountMove(models.Model):
                         no_motor = linea.lot_id.no_motor
 
                         pedimento = self.env['stock.move.line'].search([('lot_id', '=', serie), ('reference', 'ilike', 'IN')])
-                        date_1 = self.env['stock.landed.cost'].search([('picking_ids', '=', linea.move_id.picking_id.name)]).date
+                        date_1 = self.env['stock.landed.cost'].search([('picking_ids', '=', linea.move_id.picking_id.name)])
+
+                        _logger.info(pedimento,date_1)
 
                         note_text = note_text + 'Serie: ' + serie +'.\n' + 'No Motor: ' + no_motor +'.\n' + 'Pedimento: ' + str(pedimento[0].l10n_mx_edi_customs_number) +'.\n' + 'Fecha de ingreso: ' + str(date_1) +'.\n'
             
