@@ -14,7 +14,7 @@ class WarrantyRequests(models.Model):
     color = fields.Integer(string='Color Index')
                 
     folio = fields.Many2one('warranty.card', string='Evaluaciones')
-    cliente = fields.Many2one('warranty.requests', string='Cliente', related='folio.propietario')
+    cliente = fields.Char(string='Cliente')
     no_serie = fields.Many2one('warranty.requests', string='Modelo')
     modelo = fields.Many2one('warranty.requests', string='Modelo')
     no_motor = fields.Many2one('warranty.requests', string='N° de Motor')
