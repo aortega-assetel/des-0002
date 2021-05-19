@@ -34,7 +34,7 @@ class AccountMove(models.Model):
 
                         _logger.info(str(coste_destino[0].l10n_mx_edi_customs_number))
 
-                        note_text = note_text + 'Serie: ' + serie +'.\n' + 'No Motor: ' + no_motor +'.\n' + 'Pedimento: ' + str(pedimento.l10n_mx_edi_customs_number) +'.\n' + 'Fecha de ingreso: ' + str(date_1) +'.\n'
+                        note_text = note_text + 'Serie: ' + serie +'.\n' + 'No Motor: ' + no_motor +'.\n' + 'Pedimento: ' + str(coste_destino[0].l10n_mx_edi_customs_number) +'.\n' + 'Fecha de ingreso: ' + str(coste_destino[0].date) +'.\n'
             
 
                         values = {
