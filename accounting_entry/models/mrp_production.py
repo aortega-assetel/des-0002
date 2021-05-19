@@ -32,7 +32,7 @@ class MrpProduction(models.Model):
                         ]
                 values = {
                     'ref' : self.name +  ' - Costo de producción',
-                    'date' : datetime.today().strftime('%d/%m/%Y'),
+                    'date' : datetime.today(),
                     'journal_id' : line.workcenter_id.journal.id,
                     'line_ids' : move_lines
                     }
