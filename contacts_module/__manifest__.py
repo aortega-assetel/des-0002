@@ -23,6 +23,6 @@
 
     # always loaded
     'data': [
-        'views/contacts_addons.xml',
+        'views/res_partner.xml',
     ],
 }

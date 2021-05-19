@@ -2,7 +2,7 @@
 
 from odoo import models, fields, api
 
-class ContactsAddons(models.Model):
+class ResPartner(models.Model):
     _inherit = 'res.partner'
     
     @api.depends('name_indiviual', 'surname_matern', 'surname_patern')
