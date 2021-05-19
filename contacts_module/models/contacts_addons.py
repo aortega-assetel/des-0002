@@ -7,8 +7,8 @@ class ContactsAddons(models.Model):
     
     @api.depends('name_indiviual', 'surname_matern', 'surname_patern')
     def _concatenate_fields_contacts_addons(self):
-        nombre = + str(self.name_indiviual, self.surname_patern, self.surname_matern)
-            
+        nombre = + str(self.name_indiviual) + str(self.surname_patern) + str(self.surname_matern)
+
         self.update({
             'name': nombre
         })
