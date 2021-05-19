@@ -23,6 +23,6 @@
 
     # always loaded
     'data': [
-        'views/aduana_showroom.xml',
+        'views/stock_landed_cost.xml',
     ],
 }
