@@ -29,8 +29,10 @@ class WarrantyCard(models.Model):
     sucursal = fields.Many2one('res.partner', string="Sucursal ")
     no_serie = fields.Many2one('stock.production.lot', string='N° de Serie')
     fecha_entrega = fields.Date(string='Fecha de Entrega')
-    no_motor = fields.Many2one('warranty.requests', string='No de Motor', related='requests_id.no_motor')
-    modelo = fields.Many2one('warranty.requests', string='Modelo', related='requests_id.modelo')
+    no_motor = fields.Char(string='No de Motor')
+    modelo = fields.Char(string='Modelo')
+    #no_motor = fields.Many2one('warranty.requests', string='No de Motor', related='requests_id.no_motor')
+    #modelo = fields.Many2one('warranty.requests', string='Modelo', related='requests_id.modelo')
     descripcion = fields.Html(string='Descripción')
 
 

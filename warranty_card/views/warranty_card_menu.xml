@@ -7,7 +7,20 @@
         <field name="view_mode">kanban,tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Agrega una nueva garantía
+                Agrega una nueva poliza
+            </p>
+        </field>
+    </record>
+
+    
+    <record id="get_warranty_requests_view" model="ir.actions.act_window">
+        <field name="name">Flujo</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">warranty.requests</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Agrega una nueva solicitud
             </p>
         </field>
     </record>
@@ -33,7 +46,7 @@
     </record>
 
     <record id="warranty_card.warranty_request_menu" model="ir.ui.menu">
-        <field name="action" ref="warranty_card.get_warranty_card_view"/>
+        <field name="action" ref="warranty_card.get_warranty_requests_view"/>
         <field name="active" eval="True"/>
         <field name="groups_id" eval="[(6, 0, [])]"/>
         <field name="name">Solicitudes de garantías</field>

@@ -42,9 +42,8 @@
               </group>
             </group>                        
 
-            <group>
+            <group string="DATOS">
               <group>
-                <strong>DATOS</strong>
                 <field name="propietario"/>
                 <field name="no_serie"/>
                 <field name="distribuidor"/>
