@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <record id="mrp_workcenter_inherit_accounting_entry" model="ir.ui.view">
+    <field name="name">mrp_workcenter.inherit.accounting.entry</field>
+    <field name="model">mrp.workcenter</field>
+    <field name="inherit_id" ref="mrp.mrp_workcenter_view"/>
+    <field name="arch" type="xml">
+
+        <xpath expr="//field[@name='costs_hour']" position="after">
+            <field name="cuenta_cargo"/>
+            <field name="cuenta_abono"/>
+        </xpath>
+
+    </field>
+  </record>
+
+</odoo>
