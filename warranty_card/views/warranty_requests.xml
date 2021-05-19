@@ -13,7 +13,7 @@
         <field name="date"/>
         <field name="stage_sign_in"/>
       </tree>
-    </field> 
+    </field>
   </record>
 
   <!-- VISTA FORMULARIO  WARRANTY.REQUESTS -->

@@ -5,6 +5,13 @@ class WarrantyRequests(models.Model):
     _name = 'warranty.requests'
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Solicitudes de garantía'
+
+    kanban_state = fields.Selection([
+        ('normal', 'Gris'),
+        ('done', 'Verde'),
+        ('blocked', 'Rojo')], string='Kanban State',
+        copy=False, default='normal', required=True)
+    color = fields.Integer(string='Color Index')
                 
     folio = fields.Many2one('warranty.card', string='Evaluaciones')
     cliente = fields.Many2one('warranty.card', string='Cliente', related='folio.propietario')
