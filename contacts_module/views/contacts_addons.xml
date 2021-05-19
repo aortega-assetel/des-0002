@@ -1,0 +1,18 @@
+<odoo>
+  <data>
+    <record id="contacts_addons_inherit_contacts_module" model="ir.ui.view">
+      <field name="name">contacts.addons.inherit.contacts.module</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+
+          <xpath expr="//field[@name='parent_id']" position="after">
+              <field name="name_individual"/>
+              <field name="surname_matern"/>
+              <field name="surname_patern"/>
+          </xpath>
+
+      </field>
+    </record>
+  </data>
+</odoo>
