@@ -8,7 +8,7 @@
     <field name="model">warranty.requests</field>
     <field name="arch" type="xml">
       <tree>
-        <field name="folio" readonly="1"/>
+        <field name="name" readonly="1"/>
         <field name="cliente"/>
         <field name="date"/>
         <field name="stage_sign_in"/>
@@ -32,7 +32,7 @@
             <group>
               <div class="oe_title pr-0">
                 <h1 class="d-flex flex-row justify-content-between">
-                  <field name="folio" class="o_task_name text-truncate" readonly="1" placeholder="Folio"/>
+                  <field name="name" class="o_task_name text-truncate" readonly="1" placeholder="Folio"/>
                 </h1>
               </div>
             </group>                        
@@ -90,12 +90,12 @@
                             <div t-attf-class="oe_kanban_content">
                               <div class="o_kanban_record_top">
                                 <div>
-                                  <strong style="font-size: 140%"><field name="folio" readonly="1"/></strong>
+                                  <strong style="font-size: 140%"><field name="name" readonly="1"/></strong>
                                 </div>
                               </div>
                               <div class="o_kanban_record_body">
                                 Nombre:
-                                  <field name="folio" readonly="1"/>
+                                  <field name="name" readonly="1"/>
                                   <br/>
                                 Cliente:
                                   <field name="cliente"/>

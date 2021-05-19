@@ -6,6 +6,7 @@ class WarrantyRequests(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Solicitudes de garantía'
 
+    name = fields.Char('N° de Solicitud', copy=False, index=True, default=lambda self: _('New'))
     kanban_state = fields.Selection([
         ('normal', 'Gris'),
         ('done', 'Verde'),
@@ -29,3 +30,11 @@ class WarrantyRequests(models.Model):
         ('proceso', 'Proceso'),
         ('cerrado', 'Cerrado')
     ], string='Etapa')
+
+    @api.model
+    def create(self, vals):
+        if vals.get('name', _('New')) == _('New'):
+            vals['name'] = self.env['ir.sequence'].sudo().next_by_code('warranty.requests') or _('New')
+        result = super(WarrantyRequests, self).create(vals)
+        
+        return result
