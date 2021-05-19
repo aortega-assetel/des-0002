@@ -5,15 +5,12 @@ from odoo import models, fields, api
 class ResPartner(models.Model):
     _inherit = 'res.partner'
     
-    @api.depends('name_indiviual', 'surname_matern', 'surname_patern')
-    def _concatenate_fields_contacts_addons(self):
-        nombre = + str(self.name_indiviual) + str(self.surname_patern) + str(self.surname_matern)
 
-        self.update({
-            'name': nombre
-        })
+    first_name = fields.Char(string="Nombre(s)")
+    last_name_1 = fields.Char(string="Apellido paterno")
+    last_name_2 = fields.Char(string="Apellido materno")
 
-
-    name_indiviual = fields.Char(string="Nombre(s)", store=True, compute='_concatenate_fields_contacts_addons', tracking=4)
-    surname_matern = fields.Char(string="Apellido materno")
-    surname_patern = fields.Char(string="Apellido paterno")
+    @api.onchange('first_name', 'last_name_1', 'last_name_2')
+    def _on_change_first_name_last_name_1_last_name_2(self):
+        nombre = self.first_name + ' ' +  self.last_name_1 + ' ' + self.last_name_2
+        self.name = nombre
