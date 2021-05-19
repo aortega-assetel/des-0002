@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="get_warranty_card_view" model="ir.actions.act_window">
+        <field name="name">Flujo</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">warranty.card</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Agrega una nueva garantía
+            </p>
+        </field>
+    </record>
+
+    <record id="warranty_card.warranty_card_view_menu" model="ir.ui.menu">
+        <field name="action" eval="False"/>
+        <field name="active" eval="True"/>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="name">Garantiás</field>
+        <field name="parent_id" eval="False"/>
+        <field name="sequence">10</field>
+        <field name="web_icon">fa fa-check-circle-o,#FFFFFF,#3A7FBC</field>
+    </record>
+
+    <record id="warranty_card.warranty_card_menu" model="ir.ui.menu">
+        <field name="action" ref="warranty_card.get_warranty_card_view"/>
+        <field name="active" eval="True"/>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="name">Polizas</field>
+        <field name="parent_id" ref="warranty_card.warranty_card_view_menu"/>
+        <field name="sequence">10</field>
+        <field name="web_icon" eval="False"/>
+    </record>
+
+    <record id="warranty_card.warranty_request_menu" model="ir.ui.menu">
+        <field name="action" ref="warranty_card.get_warranty_card_view"/>
+        <field name="active" eval="True"/>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="name">Solicitudes de garantías</field>
+        <field name="parent_id" ref="warranty_card.warranty_card_view_menu"/>
+        <field name="sequence">10</field>
+        <field name="web_icon" eval="False"/>
+    </record>
+</odoo>
