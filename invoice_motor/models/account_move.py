@@ -30,9 +30,9 @@ class AccountMove(models.Model):
                         referencia = linea.reference
 
                         entrada = self.env['stock.move.line'].search([('lot_id.name', '=', serie),('reference', 'ilike', 'IN')])
-                        date_1 = self.env['stock.landed.cost'].search([('picking_ids', '=', linea.move_id.picking_id.name)])
+                        coste_destino = self.env['stock.landed.cost'].search([('picking_ids', '=', entrada[0].reference)])
 
-                        _logger.info(str(entrada[0].reference))
+                        _logger.info(str(coste_destino))
 
                         note_text = note_text + 'Serie: ' + serie +'.\n' + 'No Motor: ' + no_motor +'.\n' + 'Pedimento: ' + str(pedimento.l10n_mx_edi_customs_number) +'.\n' + 'Fecha de ingreso: ' + str(date_1) +'.\n'
             
