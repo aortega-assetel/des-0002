@@ -28,7 +28,7 @@ class AccountMove(models.Model):
                         serie = linea.lot_id.name
                         no_motor = linea.lot_id.no_motor
 
-                        pedimento = self.env['stock.move.line'].search([('lot_id', '=', serie), ('reference', 'ilike', 'IN')])
+                        pedimento = self.env['stock.move.line'].search([('lot_id.name', '=', serie)])
                         date_1 = self.env['stock.landed.cost'].search([('picking_ids', '=', linea.move_id.picking_id.name)])
 
                         _logger.info(pedimento,date_1)
