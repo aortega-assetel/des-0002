@@ -12,5 +12,5 @@ class ResPartner(models.Model):
 
     @api.onchange('first_name', 'last_name_1', 'last_name_2')
     def _on_change_first_name_last_name_1_last_name_2(self):
-        nombre = self.first_name + ' ' +  self.last_name_1 + ' ' + self.last_name_2
+        nombre = str(self.first_name) + ' ' +  str(self.last_name_1) + ' ' + str(self.last_name_2)
         self.name = nombre
