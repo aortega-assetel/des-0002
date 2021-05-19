@@ -25,5 +25,6 @@
     'data': [
         'views/stock_production_lot.xml',
         'views/stock_move_line.xml',
+        'views/stock_landed_cost.xml',
         ],
 }
