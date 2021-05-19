@@ -16,7 +16,9 @@ class MrpWorkcenter(models.Model):
 
     def button_mark_done(self):
         result = super(MrpProduction, self).button_mark_done()
+        _logger.info('Hola 1')
         if self.state == 'done':
+            _logger.info('Hola 2')
             for line in self.workorder_ids:
                 cost = line.duration * (line.workcenter_id.costs_hour/60)
                 move_lines = [
@@ -38,6 +40,7 @@ class MrpWorkcenter(models.Model):
                     'journal_id' : line.workcenter_id.journal.id,
                     'line_ids' : move_lines
                     }
+                _logger.info('Hola 3')
                 asiento = self.env['account.move'].create(values)
                 asiento.action_post()
             
