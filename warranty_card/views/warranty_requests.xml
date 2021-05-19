@@ -9,9 +9,9 @@
     <field name="arch" type="xml">
       <tree>
         <field name="folio" readonly="1"/>
-        <field name="propietario"/>
-        <field name="fecha_entrega"/>
-        <field name="stage_id"/>
+        <field name="cliente"/>
+        <field name="date"/>
+        <field name="stage_sign_in"/>
       </tree>
     </field> 
   </record>
