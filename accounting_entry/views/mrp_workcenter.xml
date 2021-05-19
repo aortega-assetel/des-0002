@@ -8,6 +8,7 @@
     <field name="arch" type="xml">
 
         <xpath expr="//field[@name='costs_hour']" position="after">
+            <field name="journal"/>
             <field name="cuenta_cargo"/>
             <field name="cuenta_abono"/>
         </xpath>
