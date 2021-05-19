@@ -15,7 +15,7 @@ class MrpWorkcenter(models.Model):
 
 
     def button_mark_done(self):
-        result = super(MrpProduction, self).button_mark_done()
+        result = super(MrpWorkcenter, self).button_mark_done()
         _logger.info('Hola 1')
         if self.state == 'done':
             _logger.info('Hola 2')
