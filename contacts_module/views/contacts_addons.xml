@@ -8,6 +8,7 @@
         <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='type']" position="before">
           <field name="name_indiviual"/>
           <field name="surname_matern"/>
+          <field name="surname_patern"/>
         </xpath>
 
       </field>
