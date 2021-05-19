@@ -69,7 +69,7 @@
     <field name="name">warranty.requests.kanban</field>
     <field name="model">warranty.requests</field>
     <field name="arch" type="xml">
-        <kanban default_group_by="stage_id" examples="project" archivable="false">
+        <kanban examples="project" archivable="false">
             <field name="color"/>
             <field name="message_needaction_counter"/>
             <templates>
