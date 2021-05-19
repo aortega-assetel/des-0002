@@ -23,10 +23,9 @@
     <field name="name">warranty.card.form</field> 
     <field name="model">warranty.card</field>
     <field name="arch" type="xml">
-      <form string="Nueva Evaluacion">
+      <form string="Nueva Tarjeta de Garantía">
           <header>
               <field name="stage_sign_in" invisible="1"/>
-              <field name="conducta_id" invisible="1"/>
               <field name="stage_id" widget="statusbar" options="{'clickable': '1', 'fold_field': 'fold'}"/>
           </header>
           <sheet>
