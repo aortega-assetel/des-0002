@@ -2,7 +2,7 @@
 
 from odoo import models, fields, api
 
-class PurchaseOrder(models.Model):
+class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
     purchase_order = fields.Char(string='Orden de compra')
