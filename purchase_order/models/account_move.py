@@ -18,7 +18,7 @@ class AccountMove(models.Model):
         sale_order = self.env['sale.order'].search([('name', '=', result.invoice_origin)])
         _logger.info(str(sale_order[0]))
         _logger.info(str(sale_order.purchase_order))
-        result.purchase_order = str(sale_order.purchase_order)
+        self.purchase_order = str(sale_order.purchase_order)
         
 
 
