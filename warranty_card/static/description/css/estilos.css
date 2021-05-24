@@ -1,0 +1,51 @@
+@page {
+    margin: 0cm 0cm;
+}
+
+/* Define now the real margins of every page in the PDF */
+body {
+    margin-top: 0cm;
+    margin-left: 0cm;
+    margin-right: 0cm;
+    margin-bottom: 0cm;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-size: auto;
+    background-color: #FFFFFF;
+    background-image: url("/warranty_card/static/pdf1.png");
+}
+
+/* Define the header rules */
+header {
+    position: fixed;
+    top: 0cm;
+    left: 0cm;
+    right: 0cm;
+    height: 0cm;
+}
+
+/* Define the footer rules */
+footer {
+    position: fixed;
+    bottom: 0cm;
+    left: 0cm;
+    right: 0cm;
+    height: 0cm;
+
+    /* Extra personal styles */
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.propietario {
+    color: #000000;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    position:absolute;
+    top:1.4cm;
+    left: 3.6cm;
+    /* width: 3cm; */
+    text-align: center;
+    /* border: 1pt solid red; */
+  }
