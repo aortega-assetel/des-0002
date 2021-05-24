@@ -9,7 +9,7 @@
                     </head>
                     <body>
                         <div class="propietario">
-                            <t t-esc="doc.propiertario"/>
+                            <t t-field="doc.propietario"/>
                         </div>
                     </body>
                 </t>
@@ -20,7 +20,6 @@
         string="Poliza de Garantía"
         report_type="qweb-pdf"
         name="warranty_card.warranty_card_pdf"
-        file="warranty_card.warranty_card_pdf"
-        menu="False"/>
+        file="warranty_card.warranty_card_pdf"/>
     </data>
 </odoo>

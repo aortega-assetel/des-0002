@@ -27,6 +27,7 @@
           <header>
               <field name="stage_sign_in" invisible="1"/>
               <field name="stage_id" widget="statusbar" options="{'clickable': '1', 'fold_field': 'fold'}"/>
+              <button name="%(warranty_card.warranty_card_pdf)d" string="Documento de Poliza" type="action" class="oe_highlight" attrs="{'invisible':[('stage_sign_in', '!=', 'new')]}"/>
           </header>
           <sheet>
             <div class="oe_button_box" name="button_box">
