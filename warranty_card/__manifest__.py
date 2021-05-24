@@ -26,6 +26,7 @@
         'views/warranty_card_menu.xml',
         'views/warranty_card.xml',
         'views/warranty_card_stage.xml',
+        'views/warranty_pdf.xml',
         'views/warranty_requests.xml',
         ],
 
