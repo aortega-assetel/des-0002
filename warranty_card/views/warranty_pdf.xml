@@ -6,13 +6,6 @@
                 <t t-foreach="docs" t-as="doc">
                     <head>
                         <style>
-                        .body {
-                            background-attachment: fixed;
-                            background-position: center;
-                            background-size: auto;
-                            background-image: url("../pdf1.png");
-                        }
-
                         .propietario {
                             color: #000000;
                             font-size: 0.8rem;
@@ -26,7 +19,7 @@
                         }
                         </style>
                     </head>
-                    <body class="body">
+                    <body class="body" t-attf-style="background-image:url('/warranty_card/static/pdf1.png');">
                         <div class="propietario">
                             <p t-field="doc.propietario"/>
                         </div>
