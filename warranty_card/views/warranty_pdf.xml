@@ -5,21 +5,9 @@
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="doc">
                     <head>
-                        <style>
-                        .propietario {
-                            color: #000000;
-                            font-size: 0.8rem;
-                            line-height: 1rem;
-                            position:absolute;
-                            top:1.4cm;
-                            left: 3.6cm;
-                            /* width: 3cm; */
-                            text-align: center;
-                            /* border: 1pt solid red; */
-                        }
-                        </style>
+                        <link rel="stylesheet" href="\warranty_card\static\css\estilos.css" TYPE="text/css"/>
                     </head>
-                    <body class="body" t-attf-style="background-image:url('/warranty_card/static/pdf1.png');">
+                    <body class="body">
                         <div class="propietario">
                             <p t-field="doc.propietario"/>
                         </div>
