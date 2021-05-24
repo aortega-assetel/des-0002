@@ -7,7 +7,7 @@
                     <head>
                         <link rel="stylesheet" href="/warranty_card/static/css/estilos.css" TYPE="text/css"/>
                     </head>
-                    <body>
+                    <body class="body">
                         <div class="propietario">
                             <p t-field="doc.propietario"/>
                         </div>
