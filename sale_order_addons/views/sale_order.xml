@@ -22,7 +22,9 @@
         </xpath>
 
         <xpath expr="//field[@name='total_pagado']" position="after">
-            <field name="importe_adeudado" widget="monetary" class="oe_subtotal_footer_separator" />
+            <div class="oe_subtotal_footer_separator oe_inline o_td_label">
+              <field name="importe_adeudado" widget="monetary" class="oe_subtotal_footer_separator" />
+            </div>
         </xpath>
 
       </field>
