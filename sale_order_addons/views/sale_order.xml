@@ -8,7 +8,7 @@
       <field name="arch" type="xml">
         <!-- Boton-->
         <xpath expr="//form//header//field[@name='state']" position="before">
-          <button name="action_pay_register" type="object" string="Registrar pago"/>
+          <button name="action_pay_register" type="object" string="Registrar pago" attrs="{'invisible' : [('importe_adeudado', '=', '0')]}"/>
         </xpath>
         <!-- Pagina en Notebook-->
         <xpath expr="//form//sheet//notebook//page[@name='customer_signature']" position="after">
@@ -22,7 +22,7 @@
         </xpath>
 
         <xpath expr="//field[@name='total_pagado']" position="after">
-            <field name="importe_adeudado" widget="monetary" class="oe_subtotal_footer_separator"/>
+            <field name="importe_adeudado" widget="monetary" class="oe_subtotal_footer_separator" />
         </xpath>
 
       </field>
