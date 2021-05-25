@@ -77,7 +77,6 @@
                         Este mensaje corresponde a la entrega del siguiente servicio:
                         <br/><br/>
                         <strong>Numero de Servicio:</strong> ${object.name}<br/>
-                        <strong>Servicio instalado:</strong> ${object.description}<br/>
                         <strong>Fecha de liberación:</strong> ${object.create_date}<br/><br/>
                     </p>
                 </div>
