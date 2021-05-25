@@ -7,7 +7,7 @@
     <field name="inherit_id" ref="account.view_move_form"/>
     <field name="arch" type="xml">
 
-      <<xpath expr="//button[@name='buttton_draft']" position="before">
+      <xpath expr="//button[@name='buttton_draft']" position="before">
         <button name="send_repuve" class="btn-primary" string="Enviar a REPUVE" type="object" attrs="{'invisible': [('state', '!=', 'done')]}"/>
       </xpath>
 
