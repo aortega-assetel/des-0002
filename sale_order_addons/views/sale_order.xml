@@ -22,10 +22,8 @@
         </xpath>
 
         <xpath expr="//field[@name='total_pagado']" position="after">
-            <group>
-              <div class="oe_subtotal_footer_separator oe_inline o_td_label">
-              </div>
-            </group>
+          <div class="oe_subtotal_footer_separator oe_inline o_td_label">
+          </div>
             <field name="importe_adeudado" widget="monetary" class="oe_subtotal_footer_separator" />
         </xpath>
 
