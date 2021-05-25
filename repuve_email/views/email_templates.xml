@@ -63,7 +63,7 @@
 
         <record id="email_template_repuve" model="mail.template">
             <field name="name">REPUVE: Send by email</field>
-            <field name="model_id" ref="account_move.model_account_move"/>
+            <field name="model_id" ref="account.model_account_move"/>
             <field name="subject">${object.company_id.name} - Entrega de Servicio (Ref ${object.name or 'n/a' })</field>
             <field name="email_from">${(object.company_id.email) | safe}</field>
             <field name="partner_to">${object.partner_id.id}</field>
