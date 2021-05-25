@@ -7,7 +7,8 @@
                     <head>
                         <link rel="stylesheet" href="/warranty_card/static/css/estilos.css" TYPE="text/css"/>
                     </head>
-                    <div t-att-style="background-image: url(/warranty_card/static/pdf1.png)">
+                    <div>
+                        <img src="/warranty_card/static/pdf1.png"/>
                         <div class="propietario">
                             <p t-field="doc.propietario"/>
                         </div>
