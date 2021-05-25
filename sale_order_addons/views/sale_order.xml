@@ -25,7 +25,7 @@
           <div class="oe_subtotal_footer_separator oe_inline o_td_label">
             <label for="importe_adeudado"/>
           </div>
-            <field name="importe_adeudado" widget="monetary" class="oe_subtotal_footer_separator" nolable="1"/>
+            <field name="importe_adeudado" widget="monetary" class="oe_subtotal_footer_separator" nolabel="1"/>
         </xpath>
 
       </field>
