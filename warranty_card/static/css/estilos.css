@@ -11,7 +11,7 @@
 }
 
 .propietario {
-    color: #000000;
+    color: #ddbe10;
     font-size: 0.8rem;
     line-height: 1rem;
     position:absolute;
@@ -20,4 +20,10 @@
     /* width: 3cm; */
     text-align: center;
     /* border: 1pt solid red; */
+  }
+
+  .imagen {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: auto;
   }
