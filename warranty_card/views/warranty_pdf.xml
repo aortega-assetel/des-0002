@@ -10,7 +10,7 @@
                     <div class="body">
                         <div class="propietario">
                             <p t-field="doc.propietario"/>
-                            <img scr="./static/pdf1.png"/ class="imagen">
+                            <img scr="./static/pdf1.png" class="imagen"/>
                         </div>
                     </div>
                 </t>
