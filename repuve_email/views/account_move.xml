@@ -8,7 +8,7 @@
     <field name="arch" type="xml">
 
       <xpath expr="//button[@name='button_draft']" position="before">
-        <button name="send_repuve" class="btn-primary" string="Enviar a REPUVE" type="object" attrs="{'invisible': [('state', '!=', 'posted')]}"/>
+        <button name="send_repuve" string="Enviar a REPUVE" type="object" attrs="{'invisible': [('state', '!=', 'posted')]}"/>
       </xpath>
 
     </field>

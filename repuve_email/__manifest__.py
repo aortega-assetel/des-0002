@@ -25,5 +25,6 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/account_move.xml',
+        'views/email_templates.xml',
     ],
 }
