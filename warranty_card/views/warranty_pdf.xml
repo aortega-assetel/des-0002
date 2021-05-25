@@ -11,7 +11,7 @@
                         <div class="propietario">
                             <p t-field="doc.propietario"/>
                         </div>
-                    <div>
+                    </div>
                 </t>
             </t>
         </template>
