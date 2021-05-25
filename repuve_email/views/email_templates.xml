@@ -70,14 +70,44 @@
             <field name="body_html" type="html">
                 <div style="margin: 0px; padding: 0px;">
                     <p style="margin: 0px; padding: 0px; font-size: 13px;">
-                        Hola,
                         <br/><br/>
-                        Estimado <strong>${object.partner_id.name}</strong> le damos la bienvenida a nuestro servicio y agradecemos su amable preferencia por <strong>${object.company_id.name}</strong>
+                        <strong>REPUVE</strong>
+                        % for row in object.service_information_ids
                         <br/><br/>
-                        Este mensaje corresponde a la entrega del siguiente servicio:
-                        <br/><br/>
-                        <strong>Numero de Servicio:</strong> ${object.name}<br/>
-                        <strong>Fecha de liberación:</strong> ${object.create_date}<br/><br/>
+                        <strong>DATOS DEL CLIENTE:</strong><br/>
+                        <strong>Nombre:</strong> ${partner_id.name}<br/>
+                        <strong>Apellido paterno:</strong> <br/> 
+                        <strong>Apellido materno:</strong> <br/> 
+                        <strong>CURP:</strong> ${partner_id.l10n_mx_edi_curp}<br/>
+                        <strong>RFC:</strong> ${partner_id.vat}<br/>
+                        <strong>Domicilio:</strong> ${partner_id.street}, ${partner_id.street2}<br/>
+                        <strong>Colonia:</strong> ${object.name}<br/> /
+                        <strong>CP:</strong> ${partner_id.zip}<br/>
+                        <strong>Telefono:</strong> ${partner_id.phone}<br/>
+                        <strong>Ciudad:</strong> ${partner_id.city_id.name}<br/>
+                        <strong>Municipio:</strong> ${partner_id.city_id.name}<br/>
+                        <strong>Estado:</strong> ${partner_id.state_id.name}<br/>
+                        <strong>Entidad federativa:</strong> ${partner_id.state_id.name}<br/>
+                        <strong>Tipo de domicilio:</strong> Nacional / Extranjero<br/>
+                        <strong>Correo electronico:</strong> ${partner_id.email}<br/>
+                        <strong>Tipo de identificacion:</strong> <br/> /
+                        <strong>No de identificacion:</strong> <br/> /
+                        <strong>Uso de CFDI:</strong> ${object.l10n_mx_edi_usage}<br/>
+                        <strong>Precio moto:</strong> ${object.name}<br/>
+                        <strong>Forma de pago:</strong> ${object.name}<br/><br/>
+                        
+                        <strong>DATOS DE UNIDAD:</strong><br/>
+                        <strong>Serie:</strong> ${object.create_date}<br/>
+                        <strong>Motor:</strong> ${object.create_date}<br/>
+                        <strong>Color:</strong> ${object.create_date}<br/>
+                        <strong>Modelo:</strong> ${object.create_date}<br/>
+                        <strong>Pedimento:</strong> ${object.create_date}<br/>
+                        <strong>Fecha de pedimento:</strong> ${object.create_date}<br/>
+                        <strong>Casco:</strong> <br/>
+                        <strong>Tamaño:</strong> <br/>
+                        <strong>Color:</strong> <br/>
+                        <strong>Camara:</strong> <br/>
+                        <strong>Cesa:</strong> <br/>
                     </p>
                 </div>
             </field>
