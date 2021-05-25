@@ -10,11 +10,12 @@ class SaleOrder(models.Model):
     def invoice_note(self, vals):
         for bud in self:
             for fac in bud.account_move_id:
-                budget_id = self.env['sale.order'].search([('name', '=', fac.invoice_origin)])
-                if budget_id:
-                    for mess in bud.picking_ids:
-                        if bud.invoice_count > 0:
-                            mess.message_post(body='PEDIDO FACTURADO <br/><br/><button name="%(action_view_url)d" string="FACTURAR" type="action"/>')
+                sale_order = self.env['sale.order'].search([])
+                for sl_order in sale_order:
+                    if sl_order.name == fac.invoice_origin:
+                        if fac.state == 'posted':
+                            for mess in bud.picking_ids:
+                                mess.message_post(body='PEDIDO FACTURADO <br/><br/><button name="%(action_view_url)d" string="FACTURAR" type="action"/>')
 
 
     def action_view_url(self):
