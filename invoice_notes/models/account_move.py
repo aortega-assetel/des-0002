@@ -1,26 +1,26 @@
 # -*- coding: utf-8 -*-
 from odoo import models, api, fields, _
 
-class SaleOrder(models.Model):
-    _inherit = 'sale.order'
+class AccountMove(models.Model):
+    _inherit = 'account.move'
 
-    account_move_id = fields.Many2one('account.move', string="Facturas")
+    sale_order_id = fields.Many2one('sale.move', string="Facturas")
     delivery_id = fields.Many2one('stock.picking', string='Pedidos')
 
+    @api.onchange('state')
     def invoice_note(self, vals):
-        for bud in self:
-            for fac in bud.account_move_id:
-                sale_order = self.env['sale.order'].search([])
-                for sl_order in sale_order:
-                    if sl_order.name == fac.invoice_origin:
-                        if fac.state == 'posted':
-                            for mess in bud.picking_ids:
+        for invoice in self:
+            if invoice.state == 'posted':
+                    sale_order = self.env['sale.order'].search([])
+                    for sl_order in sale_order:
+                         if sl_order.name == invoice.invoice_origin:
+                            for mess in sl_order.picking_ids:
                                 mess.message_post(body='PEDIDO FACTURADO <br/><br/><button name="%(action_view_url)d" string="FACTURAR" type="action"/>')
 
 
     def action_view_url(self):
-        id_view = self.account_move_id.id
-        for reg in self:
+        id_view = self.id
+        for reg in self.sale_order_id:
             if reg.invoice_count>1:
                 return {
                     'type': 'ir.actions.act_url',
