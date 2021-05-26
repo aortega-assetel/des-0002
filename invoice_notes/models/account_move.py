@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import models, api, fields, _
+import logging
+_logger = logging.getLogger(__name__)
 
 class AccountMove(models.Model):
     _inherit = 'account.move'
@@ -8,7 +10,7 @@ class AccountMove(models.Model):
     delivery_id = fields.Many2one('stock.picking', string='Pedidos')
 
     @api.onchange('state')
-    def invoice_note(self, vals):
+    def invoice_note(self):
         for invoice in self:
             if invoice.state == 'posted':
                 sale_order = self.env['sale.order'].search([('name', '=', invoice.invoice_origin)])
@@ -18,6 +20,7 @@ class AccountMove(models.Model):
             else:
                 for mess in sale_order_id.picking_ids:
                     mess.message_post(body='No Facturado')
+        _logger.info('Hola')
 
 
     def action_view_url(self):
