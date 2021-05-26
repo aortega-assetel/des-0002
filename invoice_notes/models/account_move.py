@@ -17,6 +17,9 @@ class AccountMove(models.Model):
                             for mess in sl_order.picking_ids:
                                 mess.message_post(body='PEDIDO FACTURADO <br/><br/><button name="%(action_view_url)d" string="FACTURAR" type="action"/>')
                                 mess.message_post(body='Facturado')
+            else:
+                for mess in sale_order_id.picking_ids:
+                    mess.message_post(body='No Facturado')
 
 
     def action_view_url(self):
