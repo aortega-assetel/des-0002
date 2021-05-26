@@ -9,11 +9,11 @@ class StockMoveLine(models.Model):
 
     no_motor = fields.Char(string='No. Motor')
 
-    @api.onchange('state')
+    @api.onchange('lot_id')
     def _onchange_state(self):
         #By Alan Ortega
         _logger.info('MODEL: 1')
-        if self.state == 'done':
+        if self.lot_id:
             _logger.info('MODEL: 3')
             self.lot_id.motor = True
             self.lot_id.no_motor = self.no_motor
