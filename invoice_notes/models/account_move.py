@@ -11,15 +11,11 @@ class AccountMove(models.Model):
 
     def action_post(self):
         result = super(AccountMove, self).action_post()
+        body = '<p>PEDIDO FACTURADO:</p><p style=" "></p><a href="/web#id='+ self.id +'&amp;action=270&amp;active_id=21&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=233" class="btn btn-primary" style=" ">Ir a Factura</><p></p>'
         if self.state == 'posted':
             sale_order = self.env['sale.order'].search([('name', '=', self.invoice_origin)])
             for mess in sale_order.picking_ids:
-                mess.message_post(body='PEDIDO FACTURADO <br/><br/><button name="%(action_view_url)d" string="FACTURAR" type="action"/>')
-                mess.message_post(body='Facturado')
-        else:
-            for mess in sale_order_id.picking_ids:
-                mess.message_post(body='No Facturado')
-        _logger.info('Hola')
+                mess.message_post(body=body)
         return result
 
 
