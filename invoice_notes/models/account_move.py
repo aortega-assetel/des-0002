@@ -11,7 +11,7 @@ class AccountMove(models.Model):
 
     def action_post(self):
         result = super(AccountMove, self).action_post()
-        body = '<p>PEDIDO FACTURADO:</p><p style=" "></p><a href="/web#id='+ self.id +'&amp;action=270&amp;active_id=21&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=233" class="btn btn-primary" style=" ">Ir a Factura</><p></p>'
+        body = '<p>PEDIDO FACTURADO:</p><p style=" "></p><a href="/web#id='+ str(self.id) +'&amp;action=270&amp;active_id=21&amp;model=account.move&amp;view_type=form&amp;cids=1&amp;menu_id=233" class="btn btn-primary" style=" ">Ir a Factura</><p></p>'
         if self.state == 'posted':
             sale_order = self.env['sale.order'].search([('name', '=', self.invoice_origin)])
             for mess in sale_order.picking_ids:
