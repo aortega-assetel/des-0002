@@ -16,10 +16,9 @@ class StockProductionLot(models.Model):
         result = super(StockProductionLot, self).create(vals)
 
         linea = self.env['stock.move.line'].search([('lot_name', '=', result.name)])
-        _logger.info('################')
-        _logger.info(str(linea))
-        result.motor = True
-        result.no_motor = linea.no_motor
+        if linea.no_motor:
+            result.motor = True
+            result.no_motor = linea.no_motor
         
         return result
 
