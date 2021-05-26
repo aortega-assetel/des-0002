@@ -9,18 +9,18 @@ class AccountMove(models.Model):
     sale_order_id = fields.Many2one('sale.order', string="Facturas")
     delivery_id = fields.Many2one('stock.picking', string='Pedidos')
 
-    @api.onchange('state')
-    def invoice_note(self):
-        for invoice in self:
-            if invoice.state == 'posted':
-                sale_order = self.env['sale.order'].search([('name', '=', invoice.invoice_origin)])
-                for mess in sale_order.picking_ids:
-                    mess.message_post(body='PEDIDO FACTURADO <br/><br/><button name="%(action_view_url)d" string="FACTURAR" type="action"/>')
-                    mess.message_post(body='Facturado')
-            else:
-                for mess in sale_order_id.picking_ids:
-                    mess.message_post(body='No Facturado')
+    def action_post(self):
+        result = super(AccountMove, self).action_post()
+        if self.state == 'posted':
+            sale_order = self.env['sale.order'].search([('name', '=', self.invoice_origin)])
+            for mess in sale_order.picking_ids:
+                mess.message_post(body='PEDIDO FACTURADO <br/><br/><button name="%(action_view_url)d" string="FACTURAR" type="action"/>')
+                mess.message_post(body='Facturado')
+        else:
+            for mess in sale_order_id.picking_ids:
+                mess.message_post(body='No Facturado')
         _logger.info('Hola')
+        return result
 
 
     def action_view_url(self):
