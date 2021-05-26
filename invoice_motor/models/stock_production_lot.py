@@ -15,7 +15,7 @@ class StockProductionLot(models.Model):
     def create(self, vals):
         result = super(StockProductionLot, self).create(vals)
 
-        linea = self.env['stock.move.line'].search([('lot_id', '=', result.id)])
+        linea = self.env['stock.move.line'].search([('lot_id.id', '=', result.id)])
         result.motor = True
         result.no_motor = linea.no_motor
         
