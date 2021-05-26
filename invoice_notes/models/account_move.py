@@ -11,12 +11,10 @@ class AccountMove(models.Model):
     def invoice_note(self, vals):
         for invoice in self:
             if invoice.state == 'posted':
-                    sale_order = self.env['sale.order'].search([])
-                    for sl_order in invoice.sale_order_id:
-                         if sl_order.name == invoice.invoice_origin:
-                            for mess in sl_order.picking_ids:
-                                mess.message_post(body='PEDIDO FACTURADO <br/><br/><button name="%(action_view_url)d" string="FACTURAR" type="action"/>')
-                                mess.message_post(body='Facturado')
+                sale_order = self.env['sale.order'].search([('name', '=', invoice.invoice_origin)])
+                for mess in sale_order.picking_ids:
+                    mess.message_post(body='PEDIDO FACTURADO <br/><br/><button name="%(action_view_url)d" string="FACTURAR" type="action"/>')
+                    mess.message_post(body='Facturado')
             else:
                 for mess in sale_order_id.picking_ids:
                     mess.message_post(body='No Facturado')
