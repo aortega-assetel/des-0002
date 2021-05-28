@@ -3,10 +3,16 @@
     <template id="template_invoice_inerit_purchase_order" inherit_id="account.report_invoice_document">
       <xpath expr="//div[@name='customer_code']" position="after">
         <div t-att-class="o_grid_layout">
-          <strong>Orden de compra:</strong>
+
+          <t t-if="o.purchase_order">
+            <strong>Orden de compra:</strong>
+          </t>
           <br>
           </br>
-          <span t-esc="o.purchase_order"/>
+          <t t-if="o.purchase_order">
+            <span t-field="purchase_order"/>
+          </t>
+          
         </div>
       </xpath>
     </template>
