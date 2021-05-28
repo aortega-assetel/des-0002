@@ -29,7 +29,7 @@ class AccountMove(models.Model):
                     'summary' : "Finalizar Entrega",
                     'activity_type_id' : activity_id.id,
                     #'date_deadline' : mess.stock_finish_date,
-                    'user_id' : mess.activity_user_id.id,
+                    'user_id' : mess.user_id.id,
                 }
                 new_activity = self.env['mail.activity'].create(vals)
                 mess.stock_activity_id = new_activity.id
