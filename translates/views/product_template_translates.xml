@@ -7,11 +7,7 @@
             <field name="arch" type="xml">
 
                 <xpath expr="//field[@name='unspsc_code_id']" position="attributes">
-                    <field name="quantity"/>
-                </xpath>
-
-                <xpath expr="//field[@name='unspsc_code_id']" position="attributes">
-                    <attribute string="Código SAT">{'readonly' : [('company_type', '=', 'person')]}</attribute>
+                    <attribute string="Código SAT"></attribute>
                 </xpath>
 
             </field>
