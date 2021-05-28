@@ -7,7 +7,7 @@
             <field name="arch" type="xml">
 
                 <xpath expr="//field[@name='unspsc_code_id']" position="attributes">
-                    <attribute string="Código SAT"></attribute>
+                    <attribute name="string">Código SAT</attribute>
                 </xpath>
 
             </field>
