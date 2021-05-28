@@ -6,10 +6,6 @@ _logger = logging.getLogger(__name__)
 class AccountMove(models.Model):
     _inherit = 'account.move'
 
-    sale_order_id = fields.Many2one('sale.order', string="Facturas")
-    delivery_id = fields.Many2one('stock.picking', string='Pedidos')
-
-
     def action_post(self, result):
         result = super(AccountMove, self).action_post()
         body = '<p>PEDIDO FACTURADO:</p><p style=" "></p><a href="/web#id='+ str(self.id) +'&amp;action=270&amp;active_id=21&amp;',
@@ -18,10 +14,13 @@ class AccountMove(models.Model):
             sale_order = self.env['sale.order'].search([('name', '=', self.invoice_origin)])
             for mess in sale_order.picking_ids:
                 mess.message_post(body=body)
+
+                #Si tengo actividad registrada en transferencia la borro
                 if mess.stock_activity_id:
                     mess.stock_activity_id.unlink()
-                model_id = self.env['ir.model']._get(self._name).id
-                activity_id = self.env['mail.activity.type'].search([['stock_ending_activity', '=', True]])
+
+                model_id = mess.env['ir.model']._get(self._name).id
+                activity_id = self.env['mail.activity.type'].search([['stock_move_activity', '=', True]])
 
                 vals = {
                     'res_model' : "stock.picking",
@@ -29,9 +28,9 @@ class AccountMove(models.Model):
                     'res_id' : mess.id,
                     'summary' : "Finalizar Entrega",
                     'activity_type_id' : activity_id.id,
-                    'date_deadline' : mess.stock_finish_date,
+                    #'date_deadline' : mess.stock_finish_date,
                     'user_id' : mess.activity_user_id.id,
                 }
                 new_activity = self.env['mail.activity'].create(vals)
-                stock.stock_activity_id = new_activity.id
+                mess.stock_activity_id = new_activity.id
         return result
