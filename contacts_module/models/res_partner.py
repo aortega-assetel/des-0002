@@ -21,5 +21,5 @@ class ResPartner(models.Model):
             nombre += self.last_name_2
 
         self.update({
-            'name': nombre
+            'name': nombre + self.first_name + self.last_name_1 + self.last_name_2
         })
