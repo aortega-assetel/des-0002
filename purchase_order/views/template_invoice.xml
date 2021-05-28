@@ -10,7 +10,7 @@
           <br>
           </br>
           <t t-if="o.purchase_order">
-            <span t-field="purchase_order"/>
+            <span t-field="o.purchase_order"/>
           </t>
           
         </div>
