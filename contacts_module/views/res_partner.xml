@@ -11,10 +11,6 @@
           <field name="last_name_2" attrs="{'invisible' : [('company_type', '!=', 'person')]}"/>
         </xpath>
 
-        <xpath expr="//field[@name='name']" position="attributes">
-          <attribute name="attrs">{'readonly' : [('company_type', '=', 'person')]}</attribute>
-        </xpath>
-
       </field>
     </record>
   </data>
