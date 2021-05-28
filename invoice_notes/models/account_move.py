@@ -18,7 +18,7 @@ class AccountMove(models.Model):
                 if mess.stock_activity_id:
                     mess.stock_activity_id.unlink()
 
-                model_id = mess.env['ir.model']._get(self._name).id
+                model_id = mess.env['ir.model']._get(mess._name).id
                 activity_id = self.env['mail.activity.type'].search([['stock_move_activity', '=', True]])
 
                 vals = {
