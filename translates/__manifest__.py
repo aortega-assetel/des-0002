@@ -25,5 +25,6 @@
     # always loaded
     'data': [
         'views/product_template_translates.xml',
+        'views/landed_cost.xml',
     ],
 }

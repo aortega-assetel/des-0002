@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="landed_cost_inherit_stock_landed_cost_" model="ir.ui.view">
+            <field name="name">landed.cost.inherit.stock.landed.cost</field>
+            <field name="model">stock.landed.cost</field>
+            <field name="inherit_id" ref="stock_landed_costs.view_stock_landed_cost_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='l10n_mx_edi_customs_number']" position="attributes">
+                    <attribute name="string">Pedimento</attribute>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>
