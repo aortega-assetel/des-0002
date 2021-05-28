@@ -20,4 +20,6 @@ class ResPartner(models.Model):
         if self.last_name_2:
             nombre += self.last_name_2
 
-        self.name = nombre
+        self.update({
+            'name': nombre
+        })
