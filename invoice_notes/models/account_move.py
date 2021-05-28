@@ -18,21 +18,20 @@ class AccountMove(models.Model):
             sale_order = self.env['sale.order'].search([('name', '=', self.invoice_origin)])
             for mess in sale_order.picking_ids:
                 mess.message_post(body=body)
-                for stock in self.delivery_id:
-                    if stock.stock_activity_id:
-                        stock.stock_activity_id.unlink()
-                    model_id = self.env['ir.model']._get(stock._name).id
-                    activity_id = self.env['mail.activity.type'].search([['stock_ending_activity', '=', True]])
+                if mess.stock_activity_id:
+                    mess.stock_activity_id.unlink()
+                model_id = self.env['ir.model']._get(self._name).id
+                activity_id = self.env['mail.activity.type'].search([['stock_ending_activity', '=', True]])
 
-                    vals = {
-                        'res_model' : "stock.picking",
-                        'res_model_id' : model_id,
-                        'res_id' : stock.id,
-                        'summary' : "Finalizar Entrega",
-                        'activity_type_id' : activity_id.id,
-                        'date_deadline' : stock.stock_finish_date,
-                        'user_id' : stock.activity_user_id.id,
-                    }
-                    new_activity = self.env['mail.activity'].create(vals)
-                    stock.stock_activity_id = new_activity.id
+                vals = {
+                    'res_model' : "stock.picking",
+                    'res_model_id' : model_id,
+                    'res_id' : mess.id,
+                    'summary' : "Finalizar Entrega",
+                    'activity_type_id' : activity_id.id,
+                    'date_deadline' : mess.stock_finish_date,
+                    'user_id' : mess.activity_user_id.id,
+                }
+                new_activity = self.env['mail.activity'].create(vals)
+                stock.stock_activity_id = new_activity.id
         return result
