@@ -5,12 +5,12 @@
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="doc">
                     <head>
-                        <link rel="stylesheet" href=".../static/css/estilos.css" TYPE="text/css"/>
+                        <link rel="stylesheet" href="/warranty_card/static/css/estilos.css" TYPE="text/css"/>
                     </head>
                     <div class="body">
                         <div class="propietario">
                             <p t-field="doc.propietario"/>
-                            <img scr=".../static/pdf1.png" class="imagen"/>
+                            <img scr="../static/pdf1.png" class="imagen"/>
                         </div>
                     </div>
                 </t>
