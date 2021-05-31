@@ -26,7 +26,7 @@
                             </table>
                         </div>
                     </div> -->
-                    <div class="page" style="background-image: url('/warranty_card/static/src/img/pdf1.png'); background-repeat: no-repeat;">
+                    <div class="page" style="background-image: url('/warranty_card/static/src/img/pdf1.png'); background-repeat: no-repeat;  height: 400px;">
                         <table style="width:100%; color: #1d3660">
                         <tr>
                             <td style="width:5%;">Cliente:</td>
