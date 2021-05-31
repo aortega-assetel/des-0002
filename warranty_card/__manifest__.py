@@ -23,11 +23,11 @@
     # always loaded
     'data': [
         'data/ir_sequence_data.xml',
-        'views/warranty_card_menu.xml',
-        'views/warranty_card.xml',
-        'views/warranty_card_stage.xml',
-        'views/warranty_pdf.xml',
-        'views/warranty_requests.xml',
+        'view/warranty_card_menu.xml',
+        'view/warranty_card.xml',
+        'view/warranty_card_stage.xml',
+        'view/warranty_pdf.xml',
+        'view/warranty_requests.xml',
         ],
 
 }
