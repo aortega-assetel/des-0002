@@ -5,7 +5,32 @@
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="doc">
                     <head>
-                        <link rel="stylesheet" href="/warranty_card/static/css/estilos.css" TYPE="text/css"/>
+                        <style> 
+                        .body {
+                            background-attachment: fixed;
+                            background-position: center;
+                            background-size: auto;
+                            background-image: url("../static/pdf1.png");
+                        }
+
+                        .propietario {
+                            color: #ddbe10;
+                            font-size: 0.8rem;
+                            line-height: 1rem;
+                            position:absolute;
+                            top:1.4cm;
+                            left: 3.6cm;
+                            /* width: 3cm; */
+                            text-align: center;
+                            /* border: 1pt solid red; */
+                        }
+
+                        .imagen {
+                            background-attachment: fixed;
+                            background-position: center;
+                            background-size: auto;
+                        }
+                        </style>
                     </head>
                     <div class="body">
                         <div class="propietario">
