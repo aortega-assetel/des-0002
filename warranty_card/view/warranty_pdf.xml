@@ -4,7 +4,9 @@
         <template id="warranty_card_pdf">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="doc">
-                    <link rel="stylesheet" href="/warranty_card/static/src/css/estilos.css"/>
+                    <head>
+                        <link rel="stylesheet" href="../static/src/css/estilos.css" TYPE="text/css"/>
+                    </head>
                     <div class="body">
                         <div class="propietario">
                             <p t-field="doc.propietario"/>
@@ -14,7 +16,6 @@
                 </t>
             </t>
         </template>
-        
         <report id="warranty_card_report_id"
         model="warranty.card"
         string="Poliza de Garantía"
