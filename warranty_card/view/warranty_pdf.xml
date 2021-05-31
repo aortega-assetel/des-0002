@@ -4,18 +4,17 @@
         <template id="warranty_card_pdf">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="doc">
-                    <head>
-                        <link rel="stylesheet" href="/warranty_card/static/src/css/estilos.css" TYPE="text/css"/>
-                    </head>
+                    <link rel="stylesheet" href="/warranty_card/static/src/css/estilos.css"/>
                     <div class="body">
                         <div class="propietario">
                             <p t-field="doc.propietario"/>
-                            <img scr="../static/description/pdf1.png" class="imagen"/>
+                            <img scr="../static/src/img/pdf1.png" class="imagen"/>
                         </div>
                     </div>
                 </t>
             </t>
         </template>
+        
         <report id="warranty_card_report_id"
         model="warranty.card"
         string="Poliza de Garantía"
