@@ -42,16 +42,16 @@
               </group>
             </group>                        
 
-            <group string="DATOS">
+            <group string="Datos">
               <group>
-                <field name="propietario"/>
                 <field name="no_serie"/>
+                <field name="propietario" readonly="1"/>
                 <field name="distribuidor"/>
               </group>
               <group>
                 <field name="fecha_entrega"/>
-                <field name="modelo"/>
-                <field name="no_motor"/>
+                <field name="modelo" readonly="1"/>
+                <field name="no_motor" readonly="1"/>
                 <field name="sucursal"/>
               </group>
             </group>

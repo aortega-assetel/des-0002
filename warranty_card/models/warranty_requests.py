@@ -16,11 +16,10 @@ class WarrantyRequests(models.Model):
                 
     folio = fields.Many2one('warranty.card', string='Evaluaciones')
     cliente = fields.Char(string='Cliente')
-    no_serie = fields.Many2one('warranty.requests', string='Modelo')
+    no_serie = fields.Many2one('warranty.requests', string='No de Serie')
     modelo = fields.Many2one('warranty.requests', string='Modelo')
     no_motor = fields.Many2one('warranty.requests', string='N° de Motor')
     date_sold = fields.Date(string='Fecha de compra')
-    anio_motocicleta = fields.Integer(string='Año Motocicleta')
     kilometraje = fields.Integer(string='Kilometraje')
     descripcion = fields.Html(string='Descripción')
     date = fields.Date(string='Fecha')

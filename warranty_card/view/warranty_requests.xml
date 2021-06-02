@@ -38,15 +38,15 @@
             </group>                        
             <group>
               <group>
-                <field name="cliente"/>
+                <field name="cliente" readonly="1"/>
                 <field name="no_serie"/>
-                <field name="no_motor"/>
-                <field name="anio_motocicleta"/>
+                <field name="no_motor" readonly="1"/>
+                <field name="folio"/>
               </group>
               <group>
-                <field name="date"/>
-                <field name="modelo"/>
-                <field name="date_sold"/>
+                <field name="date" readonly="1"/>
+                <field name="modelo" readonly="1"/>
+                <field name="date_sold" readonly="1"/>
                 <field name="kilometraje"/>
               </group>
             </group>
