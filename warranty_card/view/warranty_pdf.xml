@@ -18,7 +18,7 @@
                         <div style="float: right;">
                             <table class="font">
                                 <tr>
-                                    <td style="text-align: left; border-collapse: collapse; border: black 1px solid">&nbsp;No. de Folio:&nbsp;<span t-field="doc.name"/>&nbsp;</td>
+                                    <td style="text-align: left; border-collapse: collapse; border: black 1px solid"> No. de Folio: <span t-field="doc.name"/> </td>
                                 </tr>
                             </table>
                         </div>
