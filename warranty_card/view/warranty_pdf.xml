@@ -6,11 +6,8 @@
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="doc">
                     <head>
-                    <link href="//db.onlinewebfonts.com/c/08d650121338aabfb572832ded6e2ba6?family=Uni+Sans+Heavy+Italic+CAPS" rel="stylesheet" type="text/css"/>
                     <style>
-                        .font {
-                            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                        }
+
                     </style>
                     </head>
                     <div class="header">
