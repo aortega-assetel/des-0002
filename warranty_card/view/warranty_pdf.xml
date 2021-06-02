@@ -4,140 +4,112 @@
 
         <template id="warranty_card_pdf">
             <t t-call="web.html_container">
-                <t t-foreach="docs" t-as="o">
-                    <!--<div class="header">
+                <t t-foreach="docs" t-as="doc">
+                    <head>
+                    <link href="//db.onlinewebfonts.com/c/08d650121338aabfb572832ded6e2ba6?family=Uni+Sans+Heavy+Italic+CAPS" rel="stylesheet" type="text/css"/>
+                    <style>
+                        @import url(//db.onlinewebfonts.com/c/08d650121338aabfb572832ded6e2ba6?family=Uni+Sans+Heavy+Italic+CAPS);
+
+                        .font {
+                            @font-face {font-family: "Uni Sans Heavy Italic CAPS"; 
+                            src: url("//db.onlinewebfonts.com/t/08d650121338aabfb572832ded6e2ba6.eot"); 
+                            src: url("//db.onlinewebfonts.com/t/08d650121338aabfb572832ded6e2ba6.eot?#iefix") format("embedded-opentype"), 
+                            url("//db.onlinewebfonts.com/t/08d650121338aabfb572832ded6e2ba6.woff2") format("woff2"), 
+                            url("//db.onlinewebfonts.com/t/08d650121338aabfb572832ded6e2ba6.woff") format("woff"), 
+                            url("//db.onlinewebfonts.com/t/08d650121338aabfb572832ded6e2ba6.ttf") format("truetype"), 
+                            url("//db.onlinewebfonts.com/t/08d650121338aabfb572832ded6e2ba6.svg#Uni Sans Heavy Italic CAPS") format("svg"); }
+                        }
+                    </style>
+                    </head>
+                    <div class="header">
                         <div style="float: left;">
-                            <img src="/warranty_card/static/src/img/pdf1.png" alt="Assetel" width="250px"/>
+                            <img src="/warranty_card/static/description/icon.png" alt="Assetel" width="150px"/>
                         </div>
                         <div style="float: right;">
-                            <table>
+                            <table class="font">
                                 <tr>
-                                    <td style="text-align: right; padding-right: 10px; color: #1d3660; font-weight: bold">REPORTE DE SERVICIO </td>
-                                    <td style="text-align: center; background: #EFA54D; padding: 3px 10px 3px 10px; color: #000000; border-radius: 15px 15px 0px 0px; border: white 1px solid">a / a</td>
-                                </tr>
-                                <tr>
-                                    <td style="text-align: right; padding-right: 10px; color: #1d3660; font-weight: bold">FECHA</td>
-                                    <td style="text-align: center; background: #EFA54D; padding: 3px 10px 3px 10px; border: white 1px solid">a</td>
-                                </tr>
-                                <tr>
-                                    <td style="text-align: right; padding-right: 10px; color: #1d3660">ORDEN DE TRABAJO</td>
-                                    <td style="text-align: center; background: #EFA54D; padding: 3px 10px 3px 10px; border-radius: 0px 0px 15px 15px; border: white 1px solid">a</td>
+                                    <td class="" style="text-align: left; font-weight: bold; text-transform: capitalize;">Póliza de Garantía </td>
+                                    <td style="text-align: left; border-collapse: collapse; border: black 1px solid">No. de Folio: <span t-field="doc.name"/></td>
                                 </tr>
                             </table>
                         </div>
-                    </div> -->
-                    <div class="page" style="background-image: url('../static/src/img/pdf1.png'); background-repeat: no-repeat; height: 100vh;">
-                        <table style="width:100%; color: #1d3660">
-                        <tr>
-                            <td style="width:5%;">Cliente:</td>
-                            <td style="border-bottom: 1pt solid #1d3660; text-align: left;width:45%"><p style="width: 300px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;color:black;">a</p></td>
-                            <td style="width:4%; margin-left: 2px">Sitio:</td>
-                            <td style="border-bottom: 1pt solid #1d3660; text-align: left;width:46%"><p style="width: 300px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;color:black;">a</p></td>
-                        </tr>
-                        </table>
-                        <table style="width:100%; color: #1d3660">
-                        <tr>
-                            <td style="width:5%">Contacto:</td>
-                            <td style="border-bottom: 1pt solid #1d3660;color:black"></td>
-                            <td style="width:5%">Puesto:</td>
-                            <td style="border-bottom: 1pt solid #1d3660;color:black"></td>
-                            <td style="width:5%">Telefono:</td>
-                            <td style="border-bottom: 1pt solid #1d3660;color:black"></td>
-                        </tr>
-                        </table>
-                        <div style="text-align: center; margin-top: 20px; margin-bottom: 20px">
-                        <span style="border-radius: 15px 15px 15px 15px; background: #1d3660; color: #FFFFFF; padding: 5px 30px 5px 30px; font-weight: bold">SERVICIO SOLICITADO:</span>
+                        <div>
+                            <thead  class="font" style="empty-cells: show; border-collapse: collapse; border: 1px solid black;">
+                                <tr>
+                                    <th style="text-transform: capitalize; font-weight: 600;">Datos</th>
+                                    <th></th>
+                                    <th style="text-transform: capitalize; color: #275485;">Fecha de Entrega:</th>
+                                    <th><span t-field="doc.fecha_entrega"/></th>
+                                </tr>
+                            </thead>
+                            <table  class="font" style="width:100%;">
+                                <tr style="border-bottom: 1pt solid #1d3660;">
+                                    <td style="text-align: left; font-weight: bold; width:15%;">Propietario:</td>
+                                    <td style="text-align: left; width:35%;"></td>
+                                    <td style="text-align: left; font-weight: bold; width:15%;">Modelo:</td>
+                                    <td style="text-align: left; width:35%;"></td>
+                                </tr>
+                                <tr style="border-bottom: 1pt solid #1d3660;">
+                                    <td style="text-align: right; font-weight: bold; width:15%;">No. de Serie:</td>
+                                    <td style="text-align: right; width:35%;"></td>
+                                    <td style="text-align: right; font-weight: bold; width:15%;">No. de Motor:</td>
+                                    <td style="text-align: right; width:35%;"></td>
+                                </tr>
+                            </table>
+                            <table class="font" style="width:100%;">
+                                <tr style="border-bottom: 1pt solid #1d3660;">
+                                    <td style="text-align: left; font-weight: bold; width:15%;">Distribuidor:</td>
+                                    <td style="text-align: left; font-weight: bold; width:15%;"></td>
+                                    <td style="text-align: left; font-weight: bold; width:15%;">Sucursal:</td>
+                                    <td style="text-align: left; font-weight: bold; width:15%;"></td>
+                                    <td style="text-align: left; font-weight: bold; width:15%;">No.</td>
+                                    <td style="text-align: left; font-weight: bold; width:15%;"></td>
+                                </tr>
+                            </table>
                         </div>
-                        <table style="width:100%; text-align: center; border-bottom: 1pt solid #1d3660; color: #1d3660">
-                        <tr>
-                            <td>a</td>
-                        </tr>
-                        </table>
-                        <div style="text-align: center; margin-top: 20px; margin-bottom: 0px">
-                        <span style="border-radius: 15px 15px 15px 15px; background: #1d3660; color: #FFFFFF; padding: 5px 30px 5px 30px; font-weight: bold">SERVICIO REALIZADO:</span>
-                        </div>
-                        <table style="width:100%; color: #1d3660">
-                        <tr>
-                            <td  style="width:33%"><span style="height: 15px; width: 15px; border-radius: 50%; border: #EFA54D 2px solid; display: inline-block; margin-right: 5px;"></span>Instalación</td>
-                            <td style="width:33%r"><span style="height: 15px; width: 15px; border-radius: 50%; border: #EFA54D 2px solid; display: inline-block; margin-right: 5px;"></span>Venta</td>
-                            <td style="width:33%"><span style="height: 15px; width: 15px; border-radius: 50%; border: #EFA54D 2px solid; display: inline-block; margin-right: 5px;"></span>Reparación de Infraestructura</td>
-                        </tr>
-                        <tr>
-                            <td style="width:33%"><span style="height: 15px; width: 15px; border-radius: 50%; border: #EFA54D 2px solid; display: inline-block; margin-right: 5px;"></span>Desinstalación</td>
-                            <td style="width:33%"><span style="height: 15px; width: 15px; border-radius: 50%; border: #EFA54D 2px solid; display: inline-block; margin-right: 5px;"></span>Préstamo</td>
-                            <td style="width:33%"><span style="height: 15px; width: 15px; border-radius: 50%; border: #EFA54D 2px solid; display: inline-block; margin-right: 5px;"></span>Mantenimiento Correctivo</td>
-                        </tr>
-                        <tr>
-                            <td style="width:33%"><span style="height: 15px; width: 15px; border-radius: 50%; border: #EFA54D 2px solid; display: inline-block; margin-right: 5px;"></span>Reubicación</td>
-                            <td style="width:33%"><span style="height: 15px; width: 15px; border-radius: 50%; border: #EFA54D 2px solid; display: inline-block; margin-right: 5px;"></span>Demo</td>
-                            <td style="width:33%"><span style="height: 15px; width: 15px; border-radius: 50%; border: #EFA54D 2px solid; display: inline-block; margin-right: 5px;"></span>Mantenimiento Preventivo</td>
-                        </tr>
-                        <tr>
-                            <td style="width:33%"><span style="height: 15px; width: 15px; border-radius: 50%; border: #EFA54D 2px solid; display: inline-block; margin-right: 5px;"></span>Cambio configuración</td>
-                            <td style="width:33%"><span style="height: 15px; width: 15px; border-radius: 50%; border: #EFA54D 2px solid; display: inline-block; margin-right: 5px;"></span>Soporte técnico por evento</td>
-                            <td style="width:33%"><span style="height: 15px; width: 15px; border-radius: 50%; border: #EFA54D 2px solid; display: inline-block; margin-right: 5px;"></span>Otro:</td>
-                        </tr>
-                        <br>
-                        </br>
-                        </table>
-                        <table style="width:100%; background: #1d3660; color: #FFFFFF; font-weight: bold; border-radius: 15px 15px 15px 15px;">
-                        <tr style="text-align: center;">
-                            <td style="width:20%">EQUIPO</td>
-                            <td style="width:40%">MODELO</td>
-                            <td style="width:20%">No. SERIE</td>
-                            <td style="width:20%">IP</td>
-                        </tr>
-                        </table>
-                        <br>
-                        </br>
-                        <table style="width: 100%; ">
-                        <tr>
-                            <td style="border-radius: 15px 15px 15px 15px; background: #1d3660; color: #FFFFFF; padding: 5px 30px 5px 30px; font-weight: bold; text-align: center; margin-top: 20px;">OBSERVACIONES:</td>
-                        </tr>
-                        <tr>
-                            <td style="border-radius: 15px 15px 15px 15px; background: #EFA54D; color: #000000; padding: 5px 30px 5px 30px; text-align: left; margin-top: 20px;height:80px"> </td>
-                        </tr>
-                        </table>
-                        <table style="width:80%; color: #1d3660; margin: 0 auto; text-align: center; margin-top: 20px; margin-bottom: 20px;">
-                        <tr style="">
-                            <td style="width: 14%;">Atendido por:</td>
-                            <td style="border-bottom: 1pt solid #1d3660; text-align: left;">a</td>
-                        </tr>
-                        </table>
-                        <table style="width:80%; color: #1d3660; margin: 0 auto;">
-                        <tr>
-                            <td style="width:12.5%">Hora Inicio:</td>
-                            <td style="border-bottom: 1pt solid #1d3660;"></td>
-                            <td style="width:12.5%">Hora Final:</td>
-                            <td style="border-bottom: 1pt solid #1d3660;"></td>
-                        </tr>
-                        </table>
-                        <br>
-                        </br>
-                        <div style="text-align: center; margin-top: 20px; margin-bottom: 20px">
-                        <span style="border-radius: 15px 15px 15px 15px; background: #1d3660; color: #FFFFFF; padding: 5px 30px 5px 30px; font-weight: bold">RECIBIDO POR:</span>
-                        </div>
-                        <br>
-                        </br>
-                        <br>
-                        </br>
-                        <br>
-                        </br>
-                        <br>
-                        </br>
-                        <table style="width: 80%; text-align: center; font-weight: bold; margin: 0 auto;">
-                        <tr>
-                            <td style="border-bottom: 1pt solid #EFA54D; width:40%"></td>
-                            <td style="color: #FFFFFF"></td>
-                            <td style="border-bottom: 1pt solid #EFA54D; width:40%"></td>
-                        </tr>
-                        </table>
-                        <table style="width:80%; text-align: center; color: #EFA54D; font-weight: bold; margin: 0 auto;">
-                        <tr>
-                            <td style="width:40%">NOMBRE Y FIRMA</td>
-                            <td style="color: #FFFFFF"></td>
-                            <td style="width:40%;">FECHA</td>
-                        </tr>
+                        <footer style="font-size: 15px;">
+                            Nota: Para su protección coteje los datos anteriores físicamente con su unidad y anote la fecha de entrega del mismo
+                        </footer>
+                    </div>
+                    <div class="page">
+                        <table style="width:100%">
+                            <thead  class="font" style="empty-cells: show; border-collapse: collapse; border: 1px solid black;">
+                                <tr>
+                                    <th style="text-transform: capitalize; font-weight: 600;">GENERALIDADES Y CONDICIONES A 24 MESES O 18,000 KILÓMETROS, LO QUE OCURRA PRIMERO.</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    Estimado cliente: Lo felicitamos por haber adquirido una MB, a su vez agradecemos la conﬁanza que ha depositado en nosotros. 
+                                    MB MOTOS S.A. de C.V. es una empresa mexicana comprometida con nuestros clientes, desde 2002 hemos proporcionado un medio de transporte de excelente calidad eﬁciente y económico. 
+                                    Durante nuestra trayectoria nos preocupamos por usar componentes de la más alta calidad, manteniendo siempre nuestros productos a la vanguardia para el consumidor.<br/>
+                                    Le sugerimos leer este documento a detalle, si tiene alguna duda favor de comunicarse a lada: 800 813 6266 o consultar nuestra web www.mbmotos.com MB MOTOS S.A. de C.V. 
+                                    con domicilio en Constituyentes No. 381-A, Col. Moderna, 44190 Guadalajara, Jalisco, México. Teléfonos: (33) 3619 1831, (33)  3619 2119. Lada: 800 813 6266. 
+                                    Se compromete a reparar o reemplazar cualquier parte de tu MB que presente defectos de fabricación, siempre y cuando cuente con todos sus servicios de mantenimiento realizados
+                                    puntualmente en los CESA (centro de servicio autorizado) de MB MOTOS S.A. de C.V. al momento de solicitar la garantía, con base a la fecha o kilometraje que se especiﬁca 
+                                    en la tabla de mantenimiento de esta póliza y que no haya excedido del período máximo estipulado de garantía (24 meses o 18000 km, desde la fecha de entrega de la unidad, 
+                                    lo que ocurra primero, aplica tabla de demérito). No se devolverá el dinero ni habrá cambios de unidades (una por otra, motor, chasis, etc.).<br/> Se le llama asentamiento de 
+                                    motor al periodo inicial de uso de un vehículo automotor, en el cual se conforman algunos componentes, tanto internos como externos de una MB. Durante este proceso se pueden
+                                    desprender rebabas y limaduras normales por la fricción de los metales nuevos. Un mal asentamiento del motor puede ocasionar graves daños o acortar la vida útil de tu MB 
+                                    por lo que te sugerimos seguir las siguientes instrucciones. Este proceso comprende los primeros 3,000 Kilómetros de uso en los que se deben de tener los siguientes cuidados: 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color: #1d3660;">-</td>
+                                <td>
+                                    No acelerar bruscamente al arrancar el motor. Debe de dar un breve giro al puño de aceleración donde el motor se mantenga encendido sin forzar. No debe de acelerar a fondo de hacerlo, causara daños o
+                                    desgaste prematuro al motor los cuales no son cubiertos por la garantía debido a que es un daño causado, no defecto de fabricación. <br/>
+                                    Evitar subir pendientes muy inclinadas. No rebasar la capacidad de carga (revisar la especiﬁcación en el manual de usuario) preferentemente evitar cargar y/ o subir 
+                                    pasajero en los primeros 1,000 km.<br/>
+                                    Revisar que el nivel de aceite sea correcto, en caso de ser necesario agregar (use solo aceite certiﬁcado y de 4 tiempos en caso de dudas revisar manual de usuario) o 
+                                    llamar al lada: 800 813 6266 para asesoría personalizada.
+                                </td>
+                            </tr>
+                            </table>
+                            <table style="width:100%;">
+                            <tr>
+                            
+                            </tr>
                         </table>
                     </div>
                     <div class="footer">
