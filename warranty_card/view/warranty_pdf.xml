@@ -8,16 +8,8 @@
                     <head>
                     <link href="//db.onlinewebfonts.com/c/08d650121338aabfb572832ded6e2ba6?family=Uni+Sans+Heavy+Italic+CAPS" rel="stylesheet" type="text/css"/>
                     <style>
-                        @import url(//db.onlinewebfonts.com/c/08d650121338aabfb572832ded6e2ba6?family=Uni+Sans+Heavy+Italic+CAPS);
-
                         .font {
-                            @font-face {font-family: "Uni Sans Heavy Italic CAPS"; 
-                            src: url("//db.onlinewebfonts.com/t/08d650121338aabfb572832ded6e2ba6.eot"); 
-                            src: url("//db.onlinewebfonts.com/t/08d650121338aabfb572832ded6e2ba6.eot?#iefix") format("embedded-opentype"), 
-                            url("//db.onlinewebfonts.com/t/08d650121338aabfb572832ded6e2ba6.woff2") format("woff2"), 
-                            url("//db.onlinewebfonts.com/t/08d650121338aabfb572832ded6e2ba6.woff") format("woff"), 
-                            url("//db.onlinewebfonts.com/t/08d650121338aabfb572832ded6e2ba6.ttf") format("truetype"), 
-                            url("//db.onlinewebfonts.com/t/08d650121338aabfb572832ded6e2ba6.svg#Uni Sans Heavy Italic CAPS") format("svg"); }
+                            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                         }
                     </style>
                     </head>
@@ -28,21 +20,21 @@
                         <div style="float: right;">
                             <table class="font">
                                 <tr>
-                                    <td class="" style="text-align: left; font-weight: bold; text-transform: capitalize;">Póliza de Garantía </td>
+                                    <td class="" style="text-align: left; font-weight: bold; text-transform: uppercase;">Póliza de Garantía </td>
                                     <td style="text-align: left; border-collapse: collapse; border: black 1px solid">No. de Folio: <span t-field="doc.name"/></td>
                                 </tr>
                             </table>
                         </div>
                         <div>
-                            <thead  class="font" style="empty-cells: show; border-collapse: collapse; border: 1px solid black;">
-                                <tr>
-                                    <th style="text-transform: capitalize; font-weight: 600;">Datos</th>
-                                    <th></th>
-                                    <th style="text-transform: capitalize; color: #275485;">Fecha de Entrega:</th>
-                                    <th><span t-field="doc.fecha_entrega"/></th>
-                                </tr>
-                            </thead>
                             <table  class="font" style="width:100%;">
+                                <thead  class="font" style="empty-cells: show; border-collapse: collapse; border: 1px solid black;">
+                                    <tr>
+                                        <th style="text-transform: uppercase; font-weight: 600;">Datos</th>
+                                        <th></th>
+                                        <th style="text-transform: uppercase; color: #275485;">Fecha de Entrega:</th>
+                                        <th><span t-field="doc.fecha_entrega"/></th>
+                                    </tr>
+                                </thead>
                                 <tr style="border-bottom: 1pt solid #1d3660;">
                                     <td style="text-align: left; font-weight: bold; width:15%;">Propietario:</td>
                                     <td style="text-align: left; width:35%;"></td>
@@ -67,19 +59,17 @@
                                 </tr>
                             </table>
                         </div>
-                        <footer style="font-size: 15px;">
+                        <footer style="font-size: 10px;">
                             Nota: Para su protección coteje los datos anteriores físicamente con su unidad y anote la fecha de entrega del mismo
                         </footer>
                     </div>
                     <div class="page">
                         <table style="width:100%">
-                            <thead  class="font" style="empty-cells: show; border-collapse: collapse; border: 1px solid black;">
                                 <tr>
-                                    <th style="text-transform: capitalize; font-weight: 600;">GENERALIDADES Y CONDICIONES A 24 MESES O 18,000 KILÓMETROS, LO QUE OCURRA PRIMERO.</th>
+                                    <td style="text-transform: capitalize; font-weight: 600; width: 100%;">GENERALIDADES Y CONDICIONES A 24 MESES O 18,000 KILÓMETROS, LO QUE OCURRA PRIMERO.</td>
                                 </tr>
-                            </thead>
                             <tr>
-                                <td>
+                                <td  style="width:100% text-align: left;">
                                     Estimado cliente: Lo felicitamos por haber adquirido una MB, a su vez agradecemos la conﬁanza que ha depositado en nosotros. 
                                     MB MOTOS S.A. de C.V. es una empresa mexicana comprometida con nuestros clientes, desde 2002 hemos proporcionado un medio de transporte de excelente calidad eﬁciente y económico. 
                                     Durante nuestra trayectoria nos preocupamos por usar componentes de la más alta calidad, manteniendo siempre nuestros productos a la vanguardia para el consumidor.<br/>
@@ -95,8 +85,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="color: #1d3660;">-</td>
-                                <td>
+                                <td style="color: #1d3660; width: 5% text-align: left; float: left;">-</td>
+                                <td  style="width:95% text-align: left;">
                                     No acelerar bruscamente al arrancar el motor. Debe de dar un breve giro al puño de aceleración donde el motor se mantenga encendido sin forzar. No debe de acelerar a fondo de hacerlo, causara daños o
                                     desgaste prematuro al motor los cuales no son cubiertos por la garantía debido a que es un daño causado, no defecto de fabricación. <br/>
                                     Evitar subir pendientes muy inclinadas. No rebasar la capacidad de carga (revisar la especiﬁcación en el manual de usuario) preferentemente evitar cargar y/ o subir 
