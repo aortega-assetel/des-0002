@@ -8,7 +8,6 @@
 
                 <xpath expr="//field[@name='lot_id']" position="replace">
                     <field name="lot_id_mb"/>
-                    <field name="lot_id"/>
                 </xpath>
 
             </field>
