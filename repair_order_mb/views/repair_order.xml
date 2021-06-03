@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="repair_order_inherit_repair_order_mb" model="ir.ui.view">
+            <field name="name">repair.order.inherit.repair.order.mb</field>
+            <field name="model">repair.order</field>
+            <field name="inherit_id" ref="repair.view_repair_order_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='lot_id']" position="attributes">
+                    <attribute name="context"></attribute>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>
