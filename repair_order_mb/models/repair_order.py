@@ -12,6 +12,6 @@ class RepairOrder(models.Model):
     @api.onchange('lot_id_mb')
     def _onchange_lot_id(self):
         if self.lot_id_mb:
-            serie = self.env['stock.production.lot'].search([['id', '=', self.lot_id]])
-            self.product_id = serie.product_id
-            self.lot_id = self.lot_id_mb
+            serie = self.env['stock.production.lot'].search([['id', '=', self.lot_id_mb.id]])
+            self.product_id = serie.product_id.id
+            self.lot_id = self.lot_id_mb.id
