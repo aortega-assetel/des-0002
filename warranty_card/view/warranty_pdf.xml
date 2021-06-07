@@ -5,6 +5,13 @@
         <template id="warranty_card_pdf">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="doc">
+                <head>
+                    <style>
+                    .table {
+                         border-collapse: collapse; border: 1px #003C52;
+                    }
+                    </style>
+                </head>
                 <div class="header">
                         <div style="float: left;">
                             <img src="/warranty_card/static/description/icon.png" alt="Assetel" width="50px"/>
@@ -21,11 +28,11 @@
                     <div class="page">
                         <div>                            
                             <table style="width:100%;">
-                                <tr style="empty-cells: show; width:100%;">
+                                <tr  class="table" style="empty-cells: show; width:100%;">
                                     <th style="text-transform: uppercase; font-weight: 900; width:20%; text-align: left; background-color: #003C52; color : azure;">Datos</th>
-                                    <th style="width:30%; border-collapse: collapse; border: 1px #003C52;"></th>
+                                    <th style="width:30%;"></th>
                                     <th style="text-transform: uppercase; color: #003C52; width:30%; text-align: left;">Fecha de Entrega:</th>
-                                    <th style="width:20%; border-collapse: collapse; border: 1px #003C52;"><span t-field="doc.fecha_entrega"/></th>
+                                    <th style="width:20%;"><span t-field="doc.fecha_entrega"/></th>
                                 </tr>
                                 <tr style="border-bottom: 1pt solid #1d3660;">
                                     <td style="text-align: left; font-weight: bold; width:15%;">Propietario:</td>
