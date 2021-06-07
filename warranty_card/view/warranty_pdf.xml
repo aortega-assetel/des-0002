@@ -7,7 +7,7 @@
                 <t t-foreach="docs" t-as="doc">
                 <div class="header">
                         <div style="float: left;">
-                            <img src="/warranty_card/static/description/icon.png" alt="Assetel" width="250px"/>
+                            <img src="/warranty_card/static/description/icon.png" alt="Assetel" width="50px"/>
                         </div>
                         <div style="float: right;">
                             <table>
