@@ -21,13 +21,12 @@
                     <div class="page">
                         <div>                            
                             <table style="width:100%;">
-                                    <tr style="empty-cells: show;width:100%; border-collapse: collapse; border: 1px solid black;">
-                                        <td style="text-transform: uppercase; font-weight: 600; width:20%; text-align: left;">Datos</td>
-                                        <td style="width:30%"></td>
-                                        <td style="text-transform: uppercase; color: #275485; width:30%;">Fecha de Entrega:</td>
-                                        <td style="width:20%"><span t-field="doc.fecha_entrega"/></td>
-                                    </tr>
-                                </thead>
+                                <tr style="empty-cells: show;width:100%; border-collapse: collapse; border: 1px solid black;">
+                                    <td style="text-transform: uppercase; font-weight: 600; width:20%; text-align: left;">Datos</td>
+                                    <td style="width:30%"></td>
+                                    <td style="text-transform: uppercase; color: #275485; width:30%;">Fecha de Entrega:</td>
+                                    <td style="width:20%"><span t-field="doc.fecha_entrega"/></td>
+                                </tr>
                                 <tr style="border-bottom: 1pt solid #1d3660;">
                                     <td style="text-align: left; font-weight: bold; width:15%;">Propietario:</td>
                                     <td style="text-align: left; width:35%;"></td>
