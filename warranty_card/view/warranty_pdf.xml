@@ -14,14 +14,16 @@
                         <div style="float: left;">
                             <img src="/warranty_card/static/description/icon.png" alt="Assetel" width="50px"/>
                         </div>
+                        <h1 style="font-weight: bold; text-transform: uppercase; text-align: center;">Póliza de Garantía</h1>
                         <div style="float: right;">
                             <table class="font">
                                 <tr>
-                                    <h2 style="font-weight: bold; text-transform: uppercase;">Póliza de Garantía</h2>
                                     <td style="text-align: left; border-collapse: collapse; border: black 1px solid"> No. de Folio: <span t-field="doc.name"/> </td>
                                 </tr>
                             </table>
                         </div>
+                    </div>
+                    <div class="page">
                         <div>
                             <table  class="font" style="width:100%;">
                                 <thead  class="font" style="empty-cells: show; border-collapse: collapse; border: 1px solid black;">
@@ -55,51 +57,41 @@
                                     <td style="text-align: left; font-weight: bold; width:15%;"></td>
                                 </tr>
                             </table>
+                            <footer style="font-size: 10px;">
+                                Nota: Para su protección coteje los datos anteriores físicamente con su unidad y anote la fecha de entrega del mismo
+                            </footer>
                         </div>
-                        <footer style="font-size: 10px;">
-                            Nota: Para su protección coteje los datos anteriores físicamente con su unidad y anote la fecha de entrega del mismo
-                        </footer>
-                    </div>
-                    <div class="page">
-                    <div>
-                    <table style="width:100%;">
-                        <tr>
-                            <td style="text-transform: capitalize; font-weight: 600; width: 100%;">GENERALIDADES Y CONDICIONES A 24 MESES O 18,000 KILÓMETROS, LO QUE OCURRA PRIMERO.</td>
-                        </tr>
-                        <tr>
-                            <td style="width:100%; text-align: left;">
-                                Estimado cliente: Lo felicitamos por haber adquirido una MB, a su vez agradecemos la conﬁanza que ha depositado en nosotros. 
-                                MB MOTOS S.A. de C.V. es una empresa mexicana comprometida con nuestros clientes, desde 2002 hemos proporcionado un medio de transporte de excelente calidad eﬁciente y económico. 
-                                Durante nuestra trayectoria nos preocupamos por usar componentes de la más alta calidad, manteniendo siempre nuestros productos a la vanguardia para el consumidor.<br/>
-                                Le sugerimos leer este documento a detalle, si tiene alguna duda favor de comunicarse a lada: 800 813 6266 o consultar nuestra web www.mbmotos.com MB MOTOS S.A. de C.V. 
-                                con domicilio en Constituyentes No. 381-A, Col. Moderna, 44190 Guadalajara, Jalisco, México. Teléfonos: (33) 3619 1831, (33)  3619 2119. Lada: 800 813 6266. 
-                                Se compromete a reparar o reemplazar cualquier parte de tu MB que presente defectos de fabricación, siempre y cuando cuente con todos sus servicios de mantenimiento realizados
-                                puntualmente en los CESA (centro de servicio autorizado) de MB MOTOS S.A. de C.V. al momento de solicitar la garantía, con base a la fecha o kilometraje que se especiﬁca 
-                                en la tabla de mantenimiento de esta póliza y que no haya excedido del período máximo estipulado de garantía (24 meses o 18000 km, desde la fecha de entrega de la unidad, 
-                                lo que ocurra primero, aplica tabla de demérito). No se devolverá el dinero ni habrá cambios de unidades (una por otra, motor, chasis, etc.).<br/> Se le llama asentamiento de 
-                                motor al periodo inicial de uso de un vehículo automotor, en el cual se conforman algunos componentes, tanto internos como externos de una MB. Durante este proceso se pueden
-                                desprender rebabas y limaduras normales por la fricción de los metales nuevos. Un mal asentamiento del motor puede ocasionar graves daños o acortar la vida útil de tu MB 
-                                por lo que te sugerimos seguir las siguientes instrucciones. Este proceso comprende los primeros 3,000 Kilómetros de uso en los que se deben de tener los siguientes cuidados: 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="color: #1d3660;  width:5%; text-align: left;">-</td>
-                            <td  style="width:95%; text-align: left;">
-                                No acelerar bruscamente al arrancar el motor. Debe de dar un breve giro al puño de aceleración donde el motor se mantenga encendido sin forzar. No debe de acelerar a fondo de hacerlo, causara daños o
-                                desgaste prematuro al motor los cuales no son cubiertos por la garantía debido a que es un daño causado, no defecto de fabricación. <br/>
-                                Evitar subir pendientes muy inclinadas. No rebasar la capacidad de carga (revisar la especiﬁcación en el manual de usuario) preferentemente evitar cargar y/ o subir 
-                                pasajero en los primeros 1,000 km.<br/>
-                                Revisar que el nivel de aceite sea correcto, en caso de ser necesario agregar (use solo aceite certiﬁcado y de 4 tiempos en caso de dudas revisar manual de usuario) o 
-                                llamar al lada: 800 813 6266 para asesoría personalizada.
-                            </td>
-                        </tr>
-                        </table>
                         <table style="width:100%;">
-                        <tr>
-                        
-                        </tr>
-                    </table>
-                    </div>
+                                <tr>
+                                    <td style="text-transform: capitalize; font-weight: 600; width: 100%;">GENERALIDADES Y CONDICIONES A 24 MESES O 18,000 KILÓMETROS, LO QUE OCURRA PRIMERO.</td>
+                                </tr>
+                            <tr>
+                                <td  style="width:100%; text-align: left;">
+                                    Estimado cliente: Lo felicitamos por haber adquirido una MB, a su vez agradecemos la conﬁanza que ha depositado en nosotros. 
+                                    MB MOTOS S.A. de C.V. es una empresa mexicana comprometida con nuestros clientes, desde 2002 hemos proporcionado un medio de transporte de excelente calidad eﬁciente y económico. 
+                                    Durante nuestra trayectoria nos preocupamos por usar componentes de la más alta calidad, manteniendo siempre nuestros productos a la vanguardia para el consumidor.<br/>
+                                    Le sugerimos leer este documento a detalle, si tiene alguna duda favor de comunicarse a lada: 800 813 6266 o consultar nuestra web www.mbmotos.com MB MOTOS S.A. de C.V. 
+                                    con domicilio en Constituyentes No. 381-A, Col. Moderna, 44190 Guadalajara, Jalisco, México. Teléfonos: (33) 3619 1831, (33)  3619 2119. Lada: 800 813 6266. 
+                                    Se compromete a reparar o reemplazar cualquier parte de tu MB que presente defectos de fabricación, siempre y cuando cuente con todos sus servicios de mantenimiento realizados
+                                    puntualmente en los CESA (centro de servicio autorizado) de MB MOTOS S.A. de C.V. al momento de solicitar la garantía, con base a la fecha o kilometraje que se especiﬁca 
+                                    en la tabla de mantenimiento de esta póliza y que no haya excedido del período máximo estipulado de garantía (24 meses o 18000 km, desde la fecha de entrega de la unidad, 
+                                    lo que ocurra primero, aplica tabla de demérito). No se devolverá el dinero ni habrá cambios de unidades (una por otra, motor, chasis, etc.).<br/> Se le llama asentamiento de 
+                                    motor al periodo inicial de uso de un vehículo automotor, en el cual se conforman algunos componentes, tanto internos como externos de una MB. Durante este proceso se pueden
+                                    desprender rebabas y limaduras normales por la fricción de los metales nuevos. Un mal asentamiento del motor puede ocasionar graves daños o acortar la vida útil de tu MB 
+                                    por lo que te sugerimos seguir las siguientes instrucciones. Este proceso comprende los primeros 3,000 Kilómetros de uso en los que se deben de tener los siguientes cuidados: 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td  style="width:95%; text-align: left;">
+                                    No acelerar bruscamente al arrancar el motor. Debe de dar un breve giro al puño de aceleración donde el motor se mantenga encendido sin forzar. No debe de acelerar a fondo de hacerlo, causara daños o
+                                    desgaste prematuro al motor los cuales no son cubiertos por la garantía debido a que es un daño causado, no defecto de fabricación. <br/>
+                                    Evitar subir pendientes muy inclinadas. No rebasar la capacidad de carga (revisar la especiﬁcación en el manual de usuario) preferentemente evitar cargar y/ o subir 
+                                    pasajero en los primeros 1,000 km.<br/>
+                                    Revisar que el nivel de aceite sea correcto, en caso de ser necesario agregar (use solo aceite certiﬁcado y de 4 tiempos en caso de dudas revisar manual de usuario) o 
+                                    llamar al lada: 800 813 6266 para asesoría personalizada.
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                     <div class="footer">
                         <br><center><small style="text-align: center">Chimalhuacán No. 3569 Piso 5 int. 6 Col. Ciudad del Sol, Zapopan, Jal. / Soporte (33) 4737 0090 / 800 112 7738 / assetel.com</small></center>
