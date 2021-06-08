@@ -21,33 +21,35 @@
                                 <th style="width:20%;"><span t-field="doc.fecha_entrega"/></th>
                             </tr>
                         </table>
-                        <table style=" width: 100%; border-bottom: 1pt solid #1d3660;">
-                            <tr style=" width: 100%; border-bottom: 1pt solid #1d3660;">
+                        <table style="width:100%; border-bottom: 1pt solid #1d3660;">
+                            <tr style=" width:100%; border-bottom: 1pt solid #1d3660;">
                                 <td style="text-align: left; font-weight: bold; width:15%;">Propietario:</td>
                                 <td style="text-align: left; width:35%;"><span t-field="doc.propietario"/></td>
                                 <td style="text-align: left; font-weight: bold; width:15%;">Modelo:</td>
                                 <td style="text-align: left; width:35%;"><span t-field="doc.modelo"/></td>
                             </tr>
-                            <tr style=" width: 100%; border-bottom: 1pt solid #1d3660;">
+                            <tr style=" width:100%; border-bottom: 1pt solid #1d3660;">
                                 <td style="text-align: left; font-weight: bold; width:15%;">No. de Serie:</td>
                                 <td style="text-align: left; width:35%;"><span t-field="doc.no_serie"/></td>
                                 <td style="text-align: left; font-weight: bold; width:15%;">No. de Motor:</td>
                                 <td style="text-align: left; width:35%;"><span t-field="doc.no_motor"/></td>
                             </tr>
-                            <tr style=" width: 100%; border-bottom: 1pt solid #1d3660;">
+                            <tr style=" width:100%; border-bottom: 1pt solid #1d3660;">
                                 <td style="text-align: left; font-weight: bold; width:15%;">Distribuidor:</td>
                                 <td style="text-align: left; font-weight: bold; width:35%;"><span t-field="doc.distribuidor"/></td>
                                 <td style="text-align: left; font-weight: bold; width:15%;">Sucursal:</td>
                                 <td style="text-align: left; font-weight: bold; width:35%;"><span t-field="doc.sucursal"/></td>
                             </tr>
-                            <tr style="font-size: 10px; text-align: justify;">
+                        </table>
+                        <table style="width:100%;">
+                        <tr style="width:100%; font-size: 10px; text-align: justify;">
                                 <td style="width:100%;">Nota: Para su protección coteje los datos anteriores físicamente con su unidad y anote la fecha de entrega del mismo</td>
                             </tr>
                         </table>
                         <br/>
                         <table style="width:100%;">
                             <tr>
-                                <td style="font-weight: 600; width: 100%; justify;">GENERALIDADES Y CONDICIONES A 24 MESES O 18,000 KILÓMETROS, LO QUE OCURRA PRIMERO.</td>
+                                <td style="font-weight: 600; width:100%; justify;">GENERALIDADES Y CONDICIONES A 24 MESES O 18,000 KILÓMETROS, LO QUE OCURRA PRIMERO.</td>
                             </tr>
                             <tr>
                                 <td  style="width:100%; text-align: left; justify;">
@@ -76,6 +78,9 @@
                                 </td>
                             </tr>
                         </table>
+                        <br/>
+                        <br/>
+                        <br/>
                         <table style="width:100%;">
                             <tr style="width:100%; empty-cells: show;"><td style="border-bottom: 1pt solid #1d3660; width:100%;"></td></tr>
                             <tr><td style="text-align:center; width:100%;">Nombre del propietario:</td> </tr>
@@ -87,14 +92,19 @@
                             <tr style="width:100%; empty-cells: show;"><td style="border-bottom: 1pt solid #1d3660; width:100%;"></td></tr>
                             <tr><td style="text-align:center; width:100%;">Firma del propietario:</td></tr>
                         </table>
-                    </div>
-                    <table style="width:100%;">
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <table style="width:100%;">
                             <tr>
                                 <td style="width: 100%; text-align: justify;">
                                 El día de hoy fue entregada la unidad descrita en perfectas condiciones y funcionamiento correctamente en presencia del interesado,
                                 a su vez fue entregado el manual de usuario, la presente garantía, adjunta con el calendario de servicios oficial.</td>
                             </tr>
                     </table>
+                    </div>
                     <div class="footer" style="text-align: justify;">
                         <br><small style="text-align: left; font-size: 15px; color: grey;">*Vigencia para unidades compradas a partir del 1º de Septiembre del 2019, aplica unicamente a modelos 2019 en adelante. Aplica restricciones</small>
                         </br>
