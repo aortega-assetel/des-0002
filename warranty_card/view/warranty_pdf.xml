@@ -5,97 +5,101 @@
         <template id="warranty_card_pdf">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="doc">
-                    <div class="header">
-                    <h2 style="font-weight: bold; text-transform: uppercase; text-align: center;">Póliza de Garantía</h2>
-                    <table style="width:100%;">
-                        <tr>
-                            <td style=" width:100%; text-align: right; border-collapse: separate; border-spacing: 15px; border: black 1px solid radio; border-radius: 5px;"> No. de Folio: <span t-field="doc.name"/> </td>
-                        </tr>
-                    </table>
+                    <head>
+                        <style>
+                            .dia {
+                                top: 90px;
+                                left: 596px;
+                                width: 27px;
+                                height: 27px;
+                            }
+                            .mes {
+                                top: 90px;
+                                left: 663px;
+                                width: 36px;
+                                height: 27px;
+                            }
+                            .anio {
+                                top: 90px;
+                                left: 727px;
+                                width: 60px;
+                                height: 27px;
+                            }
+                            .folio {
+                                top: 37px;
+                                left: 691px;
+                                width: 58px;
+                                height: 27px;
+                            }
+                            .propietario {
+                                top: 117px;
+                                left: 142px;
+                                width: 250px;
+                                height: 27px;
+                            }
+                            .noserie {
+                                top: 144px;
+                                left: 142px;
+                                width: 250px;
+                                height: 27px;
+                            }
+                            .distribuidor {
+                                top: 167px;
+                                left: 142px;
+                                width: 250px;
+                                height: 27px;
+                            }
+                            .modelo {
+                                top: 117px;
+                                left: 520px;
+                                width: 250px;
+                                height: 27px;
+                            }
+                            .nomotor {
+                                top: 140px;
+                                left: 520px;
+                                width: 250px;
+                                height: 27px;
+                            }
+                            .sucursal {
+                                top: 167px;
+                                left: 520px;
+                                width: 120px;
+                                height: 27px;
+                            }
+                        </style>
+                    </head>
+                    <div class="dia">
+                        <span t-field="doc.day"/> 
+                    </div>
+                    <div class="mes">
+                        <span t-field="doc.month"/> 
+                    </div>
+                    <div class="anio">
+                        <span t-field="doc.year"/> 
+                    </div>
+                    <div class="folio">
+                        <span t-field="doc.name"/> 
                     </div>
                     <div class="page">
-                        <table style="width:100%;">
-                            <tr  class="table" style="empty-cells: show; width:100%; border-collapse: separate; border-spacing: 5px; border: black 1px solid radio; border-radius: 5px;">
-                                <th style="text-transform: uppercase; font-weight: 900; width:50%; text-align: left; background-color: #003C52; color : azure;">Datos</th>
-                                <th style="text-transform: uppercase; color: #003C52; width:30%; text-align: left;">Fecha de Entrega:</th>
-                                <th style="width:20%;"><span t-field="doc.fecha_entrega"/></th>
-                            </tr>
-                        </table>
-                        <table style="width:100%; border-bottom: 1pt solid #1d3660;">
-                            <tr style=" width:100%; border-bottom: 1pt solid #1d3660;">
-                                <td style="text-align: left; font-weight: bold; width:15%;">Propietario:</td>
-                                <td style="text-align: left; width:35%;"><span t-field="doc.propietario"/></td>
-                                <td style="text-align: left; font-weight: bold; width:15%;">Modelo:</td>
-                                <td style="text-align: left; width:35%;"><span t-field="doc.modelo"/></td>
-                            </tr>
-                            <tr style=" width:100%; border-bottom: 1pt solid #1d3660;">
-                                <td style="text-align: left; font-weight: bold; width:15%;">No. de Serie:</td>
-                                <td style="text-align: left; width:35%;"><span t-field="doc.no_serie"/></td>
-                                <td style="text-align: left; font-weight: bold; width:15%;">No. de Motor:</td>
-                                <td style="text-align: left; width:35%;"><span t-field="doc.no_motor"/></td>
-                            </tr>
-                            <tr style=" width:100%; border-bottom: 1pt solid #1d3660;">
-                                <td style="text-align: left; font-weight: bold; width:15%;">Distribuidor:</td>
-                                <td style="text-align: left; width:35%;"><span t-field="doc.distribuidor"/></td>
-                                <td style="text-align: left; font-weight: bold; width:15%;">Sucursal:</td>
-                                <td style="text-align: left; width:35%;"><span t-field="doc.sucursal"/></td>
-                            </tr>
-                        </table>
-                        <table style="width:100%;">
-                        <tr style="width:100%; font-size: 10px; text-align: justify;">
-                                <td style="width:100%;">Nota: Para su protección coteje los datos anteriores físicamente con su unidad y anote la fecha de entrega del mismo</td>
-                            </tr>
-                        </table>
-                        <br/>
-                        <table style="width:100%;">
-                            <tr>
-                                <td style="font-weight: 600; width:100%; justify;">GENERALIDADES Y CONDICIONES A 24 MESES O 18,000 KILÓMETROS, LO QUE OCURRA PRIMERO.</td>
-                            </tr>
-                            <tr>
-                                <td  style="width:100%; text-align: left; justify;">
-                                    Estimado cliente: Lo felicitamos por haber adquirido una MB, a su vez agradecemos la conﬁanza que ha depositado en nosotros. 
-                                    MB MOTOS S.A. de C.V. es una empresa mexicana comprometida con nuestros clientes, desde 2002 hemos proporcionado un medio de transporte de excelente calidad eﬁciente y económico. 
-                                    Durante nuestra trayectoria nos preocupamos por usar componentes de la más alta calidad, manteniendo siempre nuestros productos a la vanguardia para el consumidor.<br/>
-                                    Le sugerimos leer este documento a detalle, si tiene alguna duda favor de comunicarse a lada: 800 813 6266 o consultar nuestra web www.mbmotos.com MB MOTOS S.A. de C.V. 
-                                    con domicilio en Constituyentes No. 381-A, Col. Moderna, 44190 Guadalajara, Jalisco, México. Teléfonos: (33) 3619 1831, (33)  3619 2119. Lada: 800 813 6266. 
-                                    Se compromete a reparar o reemplazar cualquier parte de tu MB que presente defectos de fabricación, siempre y cuando cuente con todos sus servicios de mantenimiento realizados
-                                    puntualmente en los CESA (centro de servicio autorizado) de MB MOTOS S.A. de C.V. al momento de solicitar la garantía, con base a la fecha o kilometraje que se especiﬁca 
-                                    en la tabla de mantenimiento de esta póliza y que no haya excedido del período máximo estipulado de garantía (24 meses o 18000 km, desde la fecha de entrega de la unidad, 
-                                    lo que ocurra primero, aplica tabla de demérito). No se devolverá el dinero ni habrá cambios de unidades (una por otra, motor, chasis, etc.).<br/> Se le llama asentamiento de 
-                                    motor al periodo inicial de uso de un vehículo automotor, en el cual se conforman algunos componentes, tanto internos como externos de una MB. Durante este proceso se pueden
-                                    desprender rebabas y limaduras normales por la fricción de los metales nuevos. Un mal asentamiento del motor puede ocasionar graves daños o acortar la vida útil de tu MB 
-                                    por lo que te sugerimos seguir las siguientes instrucciones. Este proceso comprende los primeros 3,000 Kilómetros de uso en los que se deben de tener los siguientes cuidados: 
-                                </td>
-                            </tr>
-                            <tr style="empty-cells: show;">
-                                <td  style="width:95%; text-align: justify;">
-                                    No acelerar bruscamente al arrancar el motor. Debe de dar un breve giro al puño de aceleración donde el motor se mantenga encendido sin forzar. No debe de acelerar a fondo de hacerlo, causara daños o
-                                    desgaste prematuro al motor los cuales no son cubiertos por la garantía debido a que es un daño causado, no defecto de fabricación. <br/>
-                                    Evitar subir pendientes muy inclinadas. No rebasar la capacidad de carga (revisar la especiﬁcación en el manual de usuario) preferentemente evitar cargar y/ o subir 
-                                    pasajero en los primeros 1,000 km.<br/>
-                                    Revisar que el nivel de aceite sea correcto, en caso de ser necesario agregar (use solo aceite certiﬁcado y de 4 tiempos en caso de dudas revisar manual de usuario) o 
-                                    llamar al lada: 800 813 6266 para asesoría personalizada.
-                                </td>
-                            </tr>
-                        </table>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <table style="width:100%;">
-                            <tr style="width:100%; empty-cells: show;"><td style="border-bottom: 1pt solid #1d3660; width:100%;"></td></tr>
-                            <tr><td style="text-align:center; width:100%;">Nombre del propietario:</td> </tr>
-                        </table>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <table style="width:100%;">
-                            <tr style="width:100%; empty-cells: show;"><td style="border-bottom: 1pt solid #1d3660; width:100%;"></td></tr>
-                            <tr><td style="text-align:center; width:100%;">Firma del propietario:</td></tr>
-                        </table>
-                    </div>
-                    <div class="footer" style="text-align: justify;">
-                        <br><small style="text-align: left; font-size: 15px; color: grey;">*Vigencia para unidades compradas a partir del 1º de Septiembre del 2019, aplica unicamente a modelos 2019 en adelante. Aplica restricciones</small>
-                        </br>
+                        <div class="propietario">
+                            <span t-field="doc.propietario"/> 
+                        </div>
+                        <div class="modelo">
+                            <span t-field="doc.modelo"/> 
+                        </div>
+                        <div class="noserie">
+                            <span t-field="doc.no_serie"/> 
+                        </div>
+                        <div class="nomotor">
+                            <span t-field="doc.no_motor"/> 
+                        </div>
+                        <div class="distribuidor">
+                            <span t-field="doc.distribuidor"/> 
+                        </div>
+                        <div class="sucursal">
+                            <span t-field="doc.sucursal"/> 
+                        </div>
                     </div>
                 </t>
             </t>
