@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, SUPERUSER_ID, api, datetime, DEFAULT_SERVER_DATE_FORMAT,  _ 
+from odoo import models, fields, SUPERUSER_ID, api, time,  _ 
+from datetime import date
+from datetime import datetime, date, time
 
 class WarrantyCard(models.Model):
     _name = 'warranty.card'
@@ -33,7 +35,7 @@ class WarrantyCard(models.Model):
     #no_serie = fields.Many2one('stock.production.lot', string='N° de Serie')
     no_serie = fields.Char(string='N° de Serie')
     fecha_entrega = fields.Date(string='Fecha de Entrega')
-    date = datetime.strptime(fecha_entrega, DEFAULT_SERVER_DATE_FORMAT)
+    date = datetime.strptime(fecha_entrega, "%d-%m-%Y")
     day = date.day
     month = date.month
     year = date.year
