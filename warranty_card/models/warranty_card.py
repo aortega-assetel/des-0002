@@ -35,7 +35,8 @@ class WarrantyCard(models.Model):
     #no_serie = fields.Many2one('stock.production.lot', string='N° de Serie')
     no_serie = fields.Char(string='N° de Serie')
     fecha_entrega = fields.Date(string='Fecha de Entrega')
-    date = datetime.strptime(fecha_entrega,"%Y-%m-%d")
+    fecha_string = str(fecha_entrega)
+    date = datetime.strptime(fecha_string,"%Y-%m-%d")
     day = date.day
     month = date.month
     year = date.year
