@@ -36,7 +36,7 @@ class WarrantyCard(models.Model):
     no_serie = fields.Char(string='N° de Serie')
     fecha_entrega = fields.Date(string='Fecha de Entrega')
     fecha_string = str(fecha_entrega)
-    date = datetime.strptime(fecha_string,"%Y-%m-%d")
+    date = datetime.strptime(fecha_string,"%d-%m-%Y")
     day = date.day
     month = date.month
     year = date.year
