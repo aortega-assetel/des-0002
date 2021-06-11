@@ -4,112 +4,111 @@
 
         <template id="warranty_card_pdf">
             <t t-call="web.html_container">
-                <t t-call="web.external_layout">
-                    <div class="page">
-                        <t t-foreach="docs" t-as="doc"> 
-                            <style>
-                                .dia {
-                                    position:absolute;
-                                    top: 90px;
-                                    left: 596px;
-                                    width: 27px;
-                                    height: 27px;
-                                }
-                                .mes {
-                                    position:absolute;
-                                    top: 90px;
-                                    left: 663px;
-                                    width: 36px;
-                                    height: 27px;
-                                }
-                                .anio {
-                                    position:absolute;
-                                    top: 90px;
-                                    left: 727px;
-                                    width: 60px;
-                                    height: 27px;
-                                }
-                                .folio {
-                                    position:absolute;
-                                    top: 20px;
-                                    left: 750px;
-                                    width: 58px;
-                                    height: 27px;
-                                }
-                                .propietario {
-                                    position:absolute;
-                                    top: 117px;
-                                    left: 142px;
-                                    width: 250px;
-                                    height: 27px;
-                                }
-                                .noserie {
-                                    position:absolute;
-                                    top: 144px;
-                                    left: 142px;
-                                    width: 250px;
-                                    height: 27px;
-                                }
-                                .distribuidor {
-                                    position:absolute;
-                                    top: 167px;
-                                    left: 142px;
-                                    width: 250px;
-                                    height: 27px;
-                                }
-                                .modelo {
-                                    position:absolute;
-                                    top: 117px;
-                                    left: 520px;
-                                    width: 250px;
-                                    height: 27px;
-                                }
-                                .nomotor {
-                                    position:absolute;
-                                    top: 140px;
-                                    left: 520px;
-                                    width: 250px;
-                                    height: 27px;
-                                }
-                                .sucursal {
-                                    position:absolute;
-                                    top: 167px;
-                                    left: 520px;
-                                    width: 120px;
-                                    height: 27px;
-                                }
-                            </style>
-                            <!--<div class="dia">
-                                <span t-field="doc.day"/> 
-                            </div>
-                            <div class="mes">
-                                <span t-field="doc.month"/> 
-                            </div>
-                            <div class="anio">
-                                <span t-field="doc.year"/> 
-                            </div>-->
-                            <div class="folio">
-                                <span t-field="doc.name"/> 
-                            </div>
-                            <div class="propietario">
-                                <span t-field="doc.propietario"/> 
-                            </div>
-                            <div class="modelo">
-                                <span t-field="doc.modelo"/> 
-                            </div>
-                            <div class="noserie">
-                                <span t-field="doc.no_serie"/> 
-                            </div>
-                            <div class="nomotor">
-                                <span t-field="doc.no_motor"/> 
-                            </div>
-                            <div class="distribuidor">
-                                <span t-field="doc.distribuidor"/> 
-                            </div>
-                            <div class="sucursal">
-                                <span t-field="doc.sucursal"/> 
-                            </div>
-                        </t>
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="doc">
+                        <style>
+                            .dia {
+                                position:absolute;
+                                top: 90px;
+                                left: 596px;
+                                width: 27px;
+                                height: 27px;
+                            }
+                            .mes {
+                                position:absolute;
+                                top: 90px;
+                                left: 663px;
+                                width: 36px;
+                                height: 27px;
+                            }
+                            .anio {
+                                position:absolute;
+                                top: 90px;
+                                left: 727px;
+                                width: 60px;
+                                height: 27px;
+                            }
+                            .folio {
+                                position:absolute;
+                                top: 20px;
+                                left: 750px;
+                                width: 58px;
+                                height: 27px;
+                            }
+                            .propietario {
+                                position:absolute;
+                                top: 117px;
+                                left: 142px;
+                                width: 250px;
+                                height: 27px;
+                            }
+                            .noserie {
+                                position:absolute;
+                                top: 144px;
+                                left: 142px;
+                                width: 250px;
+                                height: 27px;
+                            }
+                            .distribuidor {
+                                position:absolute;
+                                top: 167px;
+                                left: 142px;
+                                width: 250px;
+                                height: 27px;
+                            }
+                            .modelo {
+                                position:absolute;
+                                top: 117px;
+                                left: 520px;
+                                width: 250px;
+                                height: 27px;
+                            }
+                            .nomotor {
+                                position:absolute;
+                                top: 140px;
+                                left: 520px;
+                                width: 250px;
+                                height: 27px;
+                            }
+                            .sucursal {
+                                position:absolute;
+                                top: 167px;
+                                left: 520px;
+                                width: 120px;
+                                height: 27px;
+                            }
+                        </style>
+                    <!--<div class="dia">
+                        <span t-field="doc.day"/> 
+                    </div>
+                    <div class="mes">
+                        <span t-field="doc.month"/> 
+                    </div>
+                    <div class="anio">
+                        <span t-field="doc.year"/> 
+                    </div>-->
+                    <div class="header" style="position:absolute;">
+                        <div class="folio">
+                            <span t-field="doc.name"/> 
+                        </div>
+                    </div>
+                    <div class="propietario">
+                        <span t-field="doc.propietario"/> 
+                    </div>
+                    <div class="modelo">
+                        <span t-field="doc.modelo"/> 
+                    </div>
+                    <div class="noserie">
+                        <span t-field="doc.no_serie"/> 
+                    </div>
+                    <div class="nomotor">
+                        <span t-field="doc.no_motor"/> 
+                    </div>
+                    <div class="distribuidor">
+                        <span t-field="doc.distribuidor"/> 
+                    </div>
+                    <div class="sucursal">
+                        <span t-field="doc.sucursal"/> 
                     </div>
                 </t>
             </t>
