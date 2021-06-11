@@ -29,7 +29,7 @@
                             }
                             .folio {
                                 position:absolute;
-                                top: 20px;
+                                top: 1px;
                                 left: 750px;
                                 width: 58px;
                                 height: 27px;
@@ -86,9 +86,11 @@
                     <div class="anio">
                         <span t-field="doc.year"/> 
                     </div>-->
-                    <header class="folio">
-                        <span t-field="doc.name"/> 
-                    </header>
+                    <div class="header">
+                        <div class="folio">
+                            <span t-field="doc.name"/> 
+                        </div>
+                    </div>
                     <div class="propietario">
                         <span t-field="doc.propietario"/> 
                     </div>
