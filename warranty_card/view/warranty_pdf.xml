@@ -8,60 +8,70 @@
                     <head>
                         <style>
                             .dia {
+                                position:absolute;
                                 top: 90px;
                                 left: 596px;
                                 width: 27px;
                                 height: 27px;
                             }
                             .mes {
+                                position:absolute;
                                 top: 90px;
                                 left: 663px;
                                 width: 36px;
                                 height: 27px;
                             }
                             .anio {
+                                position:absolute;
                                 top: 90px;
                                 left: 727px;
                                 width: 60px;
                                 height: 27px;
                             }
                             .folio {
+                                position:absolute;
                                 top: 37px;
                                 left: 691px;
                                 width: 58px;
                                 height: 27px;
                             }
                             .propietario {
+                                position:absolute;
                                 top: 117px;
                                 left: 142px;
                                 width: 250px;
                                 height: 27px;
                             }
                             .noserie {
+                                position:absolute;
                                 top: 144px;
                                 left: 142px;
                                 width: 250px;
                                 height: 27px;
                             }
                             .distribuidor {
+                                position:absolute;
                                 top: 167px;
                                 left: 142px;
                                 width: 250px;
                                 height: 27px;
                             }
                             .modelo {
+                                position:absolute;
                                 top: 117px;
                                 left: 520px;
                                 width: 250px;
                                 height: 27px;
                             }
                             .nomotor {
+                                position:absolute;
                                 top: 140px;
                                 left: 520px;
                                 width: 250px;
                                 height: 27px;
                             }
                             .sucursal {
+                                position:absolute;
                                 top: 167px;
                                 left: 520px;
                                 width: 120px;
