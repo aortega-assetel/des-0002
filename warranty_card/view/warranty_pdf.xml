@@ -29,8 +29,8 @@
                             }
                             .folio {
                                 position:absolute;
-                                top: 1px;
-                                left: 750px;
+                                top: 20px;
+                                left: 66px;
                                 width: 58px;
                                 height: 27px;
                             }
