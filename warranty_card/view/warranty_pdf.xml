@@ -89,12 +89,12 @@
                     </div>-->
                     <div class="header">
                         <div style="float: right;">
-                            <table style="empty-cells: show;">
-                                <tr>
-                                    <td></td>
+                            <table >
+                                <tr style="empty-cells: show;">
+                                    <td> </td>
                                 </tr>
                                 <tr> 
-                                    <td style="text-align: right;"><span t-field="doc.name"/></td>
+                                    <td style="text-align: left;"><span t-field="doc.name"/></td>
                                 </tr>
                             </table>
                         </div>
