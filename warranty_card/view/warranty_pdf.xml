@@ -30,7 +30,7 @@
                             .folio {
                                 position:absolute;
                                 empty-cells: show;
-                                top: 10px;
+                                top: 20px;
                                 left: 750px;
                                 width: 58px;
                                 height: 27px;
@@ -44,14 +44,14 @@
                             }
                             .noserie {
                                 position:absolute;
-                                top: 0px;
+                                top: 27px;
                                 left: 142px;
                                 width: 250px;
                                 height: 27px;
                             }
                             .distribuidor {
                                 position:absolute;
-                                top: 0px;
+                                top: 44px;
                                 left: 142px;
                                 width: 250px;
                                 height: 27px;
@@ -65,14 +65,14 @@
                             }
                             .nomotor {
                                 position:absolute;
-                                top: 0px;
+                                top: 27px;
                                 left: 520px;
                                 width: 250px;
                                 height: 27px;
                             }
                             .sucursal {
                                 position:absolute;
-                                top: 0px;
+                                top: 44px;
                                 left: 520px;
                                 width: 120px;
                                 height: 27px;
@@ -87,16 +87,8 @@
                     <div class="anio">
                         <span t-field="doc.year"/> 
                     </div>-->
-                    <div class="header">
-                        <div style="float: right;">
-                        <br/>
-                        <br/>
-                            <table style="empty-cells: show;">
-                                <tr> 
-                                    <td style="text-align: left;"><span t-field="doc.name"/></td>
-                                </tr>
-                            </table>
-                        </div>
+                    <div class="folio">
+                        <span t-field="doc.name"/>
                     </div>
                     <div class="propietario">
                         <span t-field="doc.propietario"/> 
@@ -126,6 +118,26 @@
         report_type="qweb-pdf"
         name="warranty_card.warranty_card_pdf"/>
 
+
+        <record id="paperformat_report" model="report.paperformat">
+            <field name="name">European A4 low margin</field>
+            <field name="default" eval="True" />
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">4</field>
+            <field name="margin_bottom">4</field>
+            <field name="margin_left">4</field>
+            <field name="margin_right">4</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">0</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="warranty_card.warranty_card_report_id" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="warranty_card.paperformat_report"/>
+        </record>
     </data>
 </odoo>
 
