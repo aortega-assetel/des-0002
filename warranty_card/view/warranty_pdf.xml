@@ -87,14 +87,16 @@
                     <div class="anio">
                         <span t-field="doc.year"/> 
                     </div>-->
-                    <div class="header" style="position:absolute;">
-                        <div class="folio">
-                        <table>
-                            <tr>
-                                <td></td>
-                                <td><span t-field="doc.name"/> </td>
-                            </tr>
-                        </table>
+                    <div class="header">
+                        <div style="float: right;">
+                            <table style="empty-cells: show;">
+                                <tr>
+                                    <td></td>
+                                </tr>
+                                <tr> 
+                                    <td style="text-align: right;"><span t-field="doc.name"/></td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                     <div class="propietario">
