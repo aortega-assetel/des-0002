@@ -30,49 +30,49 @@
                             .folio {
                                 position:absolute;
                                 empty-cells: show;
-                                top: 20px;
+                                top: 10px;
                                 left: 750px;
                                 width: 58px;
                                 height: 27px;
                             }
                             .propietario {
                                 position:absolute;
-                                top: 117px;
+                                top: 0px;
                                 left: 142px;
                                 width: 250px;
                                 height: 27px;
                             }
                             .noserie {
                                 position:absolute;
-                                top: 144px;
+                                top: 0px;
                                 left: 142px;
                                 width: 250px;
                                 height: 27px;
                             }
                             .distribuidor {
                                 position:absolute;
-                                top: 167px;
+                                top: 0px;
                                 left: 142px;
                                 width: 250px;
                                 height: 27px;
                             }
                             .modelo {
                                 position:absolute;
-                                top: 117px;
+                                top: 0px;
                                 left: 520px;
                                 width: 250px;
                                 height: 27px;
                             }
                             .nomotor {
                                 position:absolute;
-                                top: 140px;
+                                top: 0px;
                                 left: 520px;
                                 width: 250px;
                                 height: 27px;
                             }
                             .sucursal {
                                 position:absolute;
-                                top: 167px;
+                                top: 0px;
                                 left: 520px;
                                 width: 120px;
                                 height: 27px;
@@ -89,7 +89,6 @@
                     </div>-->
                     <div class="header">
                         <div style="float: right;">
-                        <br/>
                         <br/>
                         <br/>
                             <table style="empty-cells: show;">
