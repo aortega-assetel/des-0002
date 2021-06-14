@@ -29,6 +29,7 @@
                             }
                             .folio {
                                 position:absolute;
+                                empty-cells: show;
                                 top: 20px;
                                 left: 750px;
                                 width: 58px;
@@ -88,7 +89,12 @@
                     </div>-->
                     <div class="header" style="position:absolute;">
                         <div class="folio">
-                            <span t-field="doc.name"/> 
+                        <table>
+                            <tr>
+                                <td></td>
+                                <td><span t-field="doc.name"/> </td>
+                            </tr>
+                        </table>
                         </div>
                     </div>
                     <div class="propietario">
